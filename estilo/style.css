@@ -1,0 +1,406 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo-principal: #f5f5f5;
+    --texto: #222222;
+    --texto-inverso: #ffffff;
+    --destaque: #0077ff;
+    --destaque-inverso: #66bbff;
+    --fundo-card: #ffffff;
+}
+
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5em;
+    color: var(--texto);
+    background-color: var(--fundo-principal);
+    hyphens: auto;
+}
+
+.telas-pequenas {
+    display: block;
+    padding: 10px 0px 5px 10px;
+    background-color: var(--destaque);
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    font-weight: bold;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+
+section#ficha {
+    background-color: var(--fundo-card);
+    padding: 20px;
+    border-radius: 8px;
+    grid-column: 2;
+    margin-top: 75px;
+}
+
+section#detalhes {
+        grid-column: 1 / 2;
+        width: 100%;
+        overflow-y: auto; /* Se você quiser que ela TAMBÉM role de forma independente, mantenha a linha abaixo. 
+        Se quiser que ela fique estática, mude para overflow: hidden; */
+    }
+
+section#ficha img.foto {
+    width: 200px;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem amassar */
+    object-position: 0px 0px;/* Deslocamento: [Eixo X (Horizontal)] [Eixo Y (Vertical)] */
+    border-radius: 50%;
+    border: 5px solid var(--fundo-card);
+    outline: 5px solid var(--destaque);
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#logo {
+    display: none;
+}
+
+img.fotop {
+    width: 100px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+section#ficha h1 {
+    color: var(--destaque);
+    margin: 15px 0px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: center;
+}
+
+li {
+    hyphens: auto;
+}
+
+strong {
+    color: var(--destaque);
+    text-align: left;
+}
+
+
+section#ficha h2 {
+    color: var(--destaque);
+    font-size: 1.2em;
+}
+
+.emfase {
+    background-color: var(--fundo-principal);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.lista {
+    hyphens: auto;
+    padding-left: 30px;
+}
+
+
+section#ficha p {
+    color: var(--texto);
+    hyphens: auto;
+}
+
+div#social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    gap: 1em;
+    margin-top: 15px;
+}
+
+div#social a {
+    color: var(--fundo-card);
+    transition: 0.5s;
+}
+
+div#social a:hover {
+    color: var(--destaque-inverso);
+}
+
+div#movel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    gap: 1em;
+    margin-top: 15px;
+}
+
+div#movel a {
+    color: var(--destaque);
+    transition: 0.5s;
+}
+
+div#movel a:hover {
+    color: var(--destaque-inverso);
+}
+
+
+
+article {
+    background-color: var(--fundo-card);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+article h2 {
+    color: var(--destaque);
+    margin-bottom: 20px;
+}
+
+/* Container principal das habilidades */
+#skill-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-bottom: 20px;
+}
+
+    .wrapper-iframe {
+    width: 100%;  /* Largura da sua "janela" de visualização */
+    height: 210px; /* Altura da sua "janela" */
+    overflow: hidden; /* Esconde o que passar dos limites acima */
+    }
+
+    .wrapper-iframe iframe {
+    width: 100%;  /* Tamanho real que o site interno vai renderizar */
+    height: 90px;
+    top: -150px;   /* Move o conteúdo interno para cima */
+    left: -400px;  /* Move o conteúdo interno para a esquerda */
+    border-top: 8px solid var(--destaque);
+    border-bottom: 8px solid var(--destaque);
+    }
+
+    .wrapper-iframe a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+     .wrapper-iframe a:hover {
+        color: var(--destaque-inverso);
+     }
+
+/* Alinha o nome (HTML 5) na esquerda e a porcentagem (90%) na direita */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nome {
+    color: var(--texto);
+}
+
+.porcent {
+    font-weight: bold;
+    color: var(--destaque);
+}
+
+/* A barra cinza de fundo (o total) */
+.barra {
+    width: 100%;
+    height: 8px;           /* Dá uma altura para a barra aparecer */
+    background-color: var(--fundo-principal); /* Cor cinza de fundo */
+    border-radius: 4px;     /* Deixa os cantos arredondados */
+    overflow: hidden;       /* Garante que o progresso não passe das bordas arredondadas */
+}
+
+/* A barra colorida que mostra o progresso (os 90%) */
+.progresso {
+    height: 100%;           /* Ocupa toda a altura da barra cinza */
+    background-color:var(--destaque-inverso); /* Cor azul para o progresso (mude se quiser) */
+    border-radius: 4px;
+}
+
+header {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;                 /* Garante que fica sempre por cima do conteúdo */
+    padding-top: 10px;
+    background-color: var(--fundo-card);
+    box-shadow: 2px 2px 8px 5px #22222221;
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Distribui os 5 itens igualmente pela largura */
+    align-items: center;
+    height: 100%;                  /* Alinha verticalmente no centro da barra */
+}
+
+
+#menu a {
+    display: flex;
+    flex-direction: column;        /* Alinha os elementos em linha vertical (coluna) */
+    align-items: center;           /* Centraliza o ícone e o texto horizontalmente entre si */
+    text-decoration: none;         /* Remove o sublinhado dos links */
+    color: var(--texto);
+    gap: 8px;
+    font-size: small;
+}
+
+
+footer {
+    display: none;
+}
+
+@media screen and (min-width: 712px) {
+
+    body, html {
+        width: 100vw;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 450px 1fr; /* Define 450px fixos para o perfil e o resto (1fr) para os detalhes */
+        gap: 25px;                       
+        width: 90%; /* Ocupa 90% do ecrã de forma limpa */ 
+        margin-top: 40px; 
+        margin-left: 75px; 
+        height: calc(100vh - 120px); /* Força o main a ocupar exatamente a altura visível da tela (descontando topo/rodapé se houver) */
+        overflow: hidden; /* Impede que o main inteiro estique para baixo com o conteúdo */                                     
+    }
+
+
+    /* 2. Configuração da seção que vai rolar sozinha */
+    section#ficha {
+        grid-column: 2 / 3; /* Posicionada na coluna da direita */
+        height: 100%; /* Força a seção a usar toda a altura delimitada pelo main */ 
+        overflow-y: auto; /* MÁGICA AQUI: Ativa a rolagem vertical apenas dentro deste bloco */
+        padding-left: 95px;
+        padding-right: 75px;
+        margin-top: 0px;
+
+    }
+
+    section#ficha::-webkit-scrollbar {
+        display: none; /* Oculta totalmente a barra de rolagem visualmente */
+    }
+
+    /* 3. A outra seção também precisa de regras para se comportar bem */
+    section#detalhes {
+        grid-column: 1 / 2;
+        height: 100%;
+        overflow-y: auto; /* Se você quiser que ela TAMBÉM role de forma independente, mantenha a linha abaixo. 
+        Se quiser que ela fique estática, mude para overflow: hidden; */
+    }
+
+    section#detalhes::-webkit-scrollbar {
+        display: none; /* Oculta totalmente a barra de rolagem visualmente */
+    }
+
+    /* CORRIGIDO: Removido o 97vw que jogava as skills para fora da tela */
+    #skill-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Duas colunas perfeitas */
+        width: 90%; /* Ocupa apenas o espaço de dentro do card */
+    }
+
+    /* CORRIGIDO: Ajustado para usar Grid ou Flex flexível nos cards de projeto */
+    #projetos-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        width: 100%;
+    }
+
+    div#movel {
+        display: none;
+    }
+
+    .conteudo {
+        background-color: white;
+    }
+
+    footer {
+
+        display: block;
+        background-color: var(--destaque);
+        color: var(--texto-inverso);
+        text-align: center;
+        padding: 10px;
+        width: 100vw;
+        height: 80px;
+
+}
+
+    header {
+        position: sticky;
+        top: 0;
+        display: block;
+        width: 100vw;
+        z-index: 9999;/* Garante que fica sempre por cima do conteúdo */
+        color: var(--texto);
+        padding: 5px;
+        background-color: var(--destaque);
+    }
+
+    #logo {
+        display: block;
+        max-width: 100px;
+        padding-bottom: 0;
+    }
+
+    menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        padding: 0px 45px 0px 25px ;
+
+
+    }
+
+    nav {
+        display: none;
+    }
+
+    img.fotop {
+        width: 100px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    footer > p {
+    font-weight: bold;
+    padding-top: 20px;} 
+}
+
+
+    
