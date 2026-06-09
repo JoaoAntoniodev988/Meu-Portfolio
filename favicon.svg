@@ -86,8 +86,8 @@
            style="stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
              style="fill:#000000;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
              id="tspan6">JA.Dev </tspan><tspan
-             style="fill:#00006b;fill-opacity:1"
-             id="tspan1">{}</tspan></tspan></text>
+             style="fill:#800080;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+             id="tspan5">{}</tspan></tspan></text>
     </g>
   </g>
 </svg>
