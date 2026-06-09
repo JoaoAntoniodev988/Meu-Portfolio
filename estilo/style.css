@@ -39,8 +39,6 @@ header {
     justify-content: center;
     align-items: center;
     padding: 12px 0px;
-    /*justify-content: flex-end;*/
-    /*align-content: center;*/
 }
 
 nav#menu ul {
@@ -54,34 +52,37 @@ nav#menu a {
     color: var(--texto-inverso);
     font-weight:520;
     padding: 0px 4px;
-    /*border-radius: 5px;
-    transition: background-color 0.5s, color 0.5s;*/
 }
-
-nav#menu a:hover {
-    /*background-color: var(--destaque-inverso);
-    color: var (--destaque);*/
-}
-
 
 @media screen and (min-width: 712px) {
     header {
-    justify-content: flex-end;
-    align-items: center;
-    padding: 12px 10px;
-    /*border-radius: 5px;
-    transition: background-color 0.5s, color 0.5s;*/}
+    justify-content: space-between;
+    align-items:first baseline;
+    padding: 12px 50px 12px 25px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.425);
+}
 
-    nav#menu a {
+img {
+    width: 6vw;
+    text-align: left;
+}
+
+nav#menu a {
     text-decoration: none;
     color: var(--texto-inverso);
     font-weight:600;
-    padding: 0px 4px;
+    border-radius: 6px;
+    padding: 10px;
+    transition: background-color 1.5s, color 1.5s;
+  
 }
 
-nav#menu ul {
-    gap: 10px;
+nav#menu a:hover {
+    background-color: var(--destaque-inverso);
+    color: var(--destaque);
+    padding: 10px;
 }
 
 }
 
+    
