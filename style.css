@@ -32,26 +32,37 @@ body {
     color: var(--texto);
 }
 
-header {
+main {
+    width: 90vw;
+    height: 100vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  gap: 0px;
+}
+
+/*{
     background-color: var(--destaque);
     color: var(--texto);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px 0px;
-}
+    justify-content: end;
+    align-items: ;
+    gap: 20px;
+    background-attachment: fixed;
+}*/
 
-header img {
-    display: none;
-}
-
-nav#menu ul {
+div#menu ul {
     list-style: none;
     display: flex;
     gap: 5px;
 }
 
-nav#menu a {
+div#menu a {
     text-decoration: none;
     color: var(--texto-inverso);
     font-weight:520;
