@@ -62,28 +62,32 @@
      inkscape:label="Camada 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-       id="rect9"
-       width="1122.5197"
-       height="447.43787"
-       x="0"
-       y="139.16212"
-       ry="198.86131" />
-    <text
-       xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:250.694px;font-family:Dyuthi;-inkscape-font-specification:'Dyuthi Italic';writing-mode:lr-tb;direction:ltr;fill:#000080;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-       x="101.0153"
-       y="427.88031"
-       id="text4"><tspan
-         sodipodi:role="line"
-         id="tspan4"
+    <g
+       id="g1"
+       transform="matrix(1.4462987,0,0,1.4462987,-235.18261,-139.67599)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="rect9"
+         width="1122.5197"
+         height="447.43787"
+         x="0"
+         y="139.16212"
+         ry="198.86131" />
+      <text
+         xml:space="preserve"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:250.694px;font-family:Dyuthi;-inkscape-font-specification:'Dyuthi Italic';writing-mode:lr-tb;direction:ltr;fill:#000080;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
          x="101.0153"
          y="427.88031"
-         style="stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
-           style="fill:#000000;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-           id="tspan6">JA.Dev</tspan><tspan
-           style="fill:#800080;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-           id="tspan5">{}</tspan></tspan></text>
+         id="text4"><tspan
+           sodipodi:role="line"
+           id="tspan4"
+           x="101.0153"
+           y="427.88031"
+           style="stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+             style="fill:#000000;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+             id="tspan6">JA.Dev</tspan><tspan
+             style="fill:#800080;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+             id="tspan5">{}</tspan></tspan></text>
+    </g>
   </g>
 </svg>
