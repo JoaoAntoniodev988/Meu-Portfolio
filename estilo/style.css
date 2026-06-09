@@ -42,7 +42,7 @@ header {
 }
 
 header img {
-    width: 6vw;
+    display: none;
 }
 
 nav#menu ul {
