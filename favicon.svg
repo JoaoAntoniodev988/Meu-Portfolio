@@ -7,8 +7,8 @@
    viewBox="0 0 3840 2160"
    version="1.1"
    id="svg1"
-   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
    sodipodi:docname="favicon.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -44,7 +44,7 @@
        x2="865.13373"
        y2="384.3786"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(5.6246025,0,0,5.6246025,-1178.9091,-1749.0017)" />
+       gradientTransform="matrix(1.754467,0,0,1.754467,-389.90677,-321.93758)" />
     <linearGradient
        id="linearGradient6"
        inkscape:collect="always">
@@ -62,27 +62,32 @@
      inkscape:label="Camada 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
-       xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:960.131px;font-family:Dyuthi;-inkscape-font-specification:'Dyuthi Italic';writing-mode:lr-tb;direction:ltr;fill:#000080;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-       x="216.67456"
-       y="661.91486"
-       id="text4"><tspan
-         sodipodi:role="line"
-         id="tspan4"
-         x="216.67456"
-         y="661.91486"
-         style="stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
-           style="fill:#000000;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-           id="tspan6">JA.</tspan></tspan><tspan
-         sodipodi:role="line"
-         x="216.67456"
-         y="1862.0786"
-         style="stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-         id="tspan1"><tspan
-           style="fill:#000000;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-           id="tspan2">Dev</tspan><tspan
-           style="fill:#800080;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-           id="tspan5">{}</tspan></tspan></text>
+    <g
+       id="g1"
+       transform="matrix(3.3013739,0,0,3.3013739,67.071457,-118.00605)">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         id="rect9"
+         width="1122.5197"
+         height="447.43787"
+         x="0"
+         y="139.16212"
+         ry="198.86131" />
+      <text
+         xml:space="preserve"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:299.491px;font-family:Dyuthi;-inkscape-font-specification:'Dyuthi Italic';writing-mode:lr-tb;direction:ltr;fill:#000080;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="45.413872"
+         y="430.09308"
+         id="text4"><tspan
+           sodipodi:role="line"
+           id="tspan4"
+           x="45.413872"
+           y="430.09308"
+           style="stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+             style="fill:#000000;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+             id="tspan6">JA.Dev</tspan><tspan
+             style="fill:#800080;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+             id="tspan5">{}</tspan></tspan></text>
+    </g>
   </g>
 </svg>
