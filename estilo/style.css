@@ -9,11 +9,11 @@ Variáveis para cores:
 --destaque-inverso
 --fundo-card*/
 
-/** {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}*/
+}
 
 
 :root {
@@ -36,4 +36,8 @@ header {
     background-color: var(--destaque);
     color: var(--texto);
     padding: 10px;
+}
+
+#menu ul {
+    list-style: none;
 }
