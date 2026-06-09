@@ -56,7 +56,7 @@
        x2="865.13374"
        y2="384.3786"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(-0.25008312,12.471847)" />
+       gradientTransform="matrix(1.4686064,0,0,1.4686064,-263.37725,-201.61975)" />
   </defs>
   <g
      inkscape:label="Camada 1"
@@ -65,21 +65,21 @@
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
        id="rect9"
-       width="764.34344"
-       height="304.66833"
-       x="179.08813"
-       y="244.51624"
-       ry="135.40817" />
+       width="1122.5197"
+       height="447.43787"
+       x="0"
+       y="139.16212"
+       ry="198.86131" />
     <text
        xml:space="preserve"
-       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:170.702px;font-family:Dyuthi;-inkscape-font-specification:'Dyuthi Italic';writing-mode:lr-tb;direction:ltr;fill:#000080;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
-       x="247.87123"
-       y="441.10956"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:250.694px;font-family:Dyuthi;-inkscape-font-specification:'Dyuthi Italic';writing-mode:lr-tb;direction:ltr;fill:#000080;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="101.0153"
+       y="427.88031"
        id="text4"><tspan
          sodipodi:role="line"
          id="tspan4"
-         x="247.87123"
-         y="441.10956"
+         x="101.0153"
+         y="427.88031"
          style="stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
            style="fill:#000000;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
            id="tspan6">JA.Dev</tspan><tspan
