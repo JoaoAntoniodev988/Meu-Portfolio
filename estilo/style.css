@@ -62,9 +62,26 @@ section#ficha h1 {
     text-align: center;
 }
 
+section#ficha h2 {
+    color: var(--destaque-inversoue);
+    font-size: 1.2em;
+}
+
+.emfase {
+    background-color: var(--fundo-principal);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.lista {
+    hyphens: auto;
+    padding-left: 30px;
+    text-align: justify;
+}
 section#ficha p {
     color: var(--texto);
     text-align: justify;
+    hyphens: auto;
 }
 
 div#social {
