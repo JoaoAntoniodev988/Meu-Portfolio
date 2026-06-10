@@ -63,8 +63,12 @@ section#ficha h1 {
     text-align: center;
 }
 
+strong {
+    color: var(--destaque);
+}
+
 section#ficha h2 {
-    color: var(--destaque-inverso);
+    color: var(--destaque);
     font-size: 1.2em;
 }
 
