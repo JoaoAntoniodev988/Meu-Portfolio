@@ -172,15 +172,17 @@ article h2 {
     display: grid;
     grid-template-columns: 2fr;
     gap: 20px;
+    width: 90vw;
 }
 
+/* Configuração da imagem do container*/
 img {
-    width: 20vw;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 8px;
 
-}
-
-#projeto-info h3 {
-    font-weight: 200;
 }
 
 
@@ -233,9 +235,17 @@ nav {
         width: 97vw;
     }
 
-    img {
-        width: 10vw;
-    }
+ #projetos-container .projeto {
+    transition: border-color 0.5s, border-width 0.5s;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+ #projetos-container .projeto:hover {
+    border-color: var(--destaque);
+    border-left-width: 15px;
+    cursor: pointer;
+ }
 
 }
 
