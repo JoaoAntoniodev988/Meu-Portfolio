@@ -130,7 +130,8 @@ article h2 {
 #skill-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 35px;
+    padding-bottom: 20px;
 }
 
 /* Alinha o nome (HTML 5) na esquerda e a porcentagem (90%) na direita */
@@ -147,7 +148,7 @@ article h2 {
 
 .porcent {
     font-weight: bold;
-    color: var(--texto);
+    color: var(--destaque);
 }
 
 /* A barra cinza de fundo (o total) */
@@ -165,6 +166,8 @@ article h2 {
     background-color:var(--destaque-inverso); /* Cor azul para o progresso (mude se quiser) */
     border-radius: 4px;
 }
+
+
 
   
 nav {
@@ -201,40 +204,11 @@ nav {
 @media screen and (min-width: 712px) {
 
     #skill-container {
-        display: grid;
         grid-template-columns: repeat(2, 1fr); /* Cria as duas colunas */
-        gap: 25px 40px; /* 25px de espaço entre linhas, 40px entre colunas */
-        align-items: start;
     }
 
-    .item {
-        width: 100%; /* Força cada bloco de skill a ocupar toda a sua metade da coluna */
-    }
-
-        /* Isso garante que o nome e a porcentagem fiquem na mesma linha, um em cada ponta */
-        .info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 8px; /* Espaço entre o texto e a barra azul */
-    }
-
-        /* Isso garante que a barra cinza de fundo ocupe toda a largura do item */
-        .barra {
-        width: 100%;
-        height: 10px;           /* Altura da barra */
-        background-color: #f0f0f0; /* Cor cinza de fundo */
-        border-radius: 5px;
-        overflow: hidden;       
-    }
-
-        /* A barra azul interna */
-        .progresso {
-        height: 100%;
-        background-color: #54b2ff; /* O azul bonito que você usou */
-        border-radius: 5px;
-    }
 }
+
+
 
     
