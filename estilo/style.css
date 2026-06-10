@@ -15,7 +15,8 @@
     --fundo-card: #ffffff;
 }
 
-body {
+body { 
+    display: inline-block;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5em;
     color: var(--texto);
