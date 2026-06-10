@@ -64,7 +64,7 @@ section#ficha h1 {
 }
 
 section#ficha h2 {
-    color: var(--destaque-inversoue);
+    color: var(--destaque-inverso);
     font-size: 1.2em;
 }
 
@@ -77,8 +77,10 @@ section#ficha h2 {
 .lista {
     hyphens: auto;
     padding-left: 30px;
-    text-align: justify;
+    text-align: left;
 }
+
+
 section#ficha p {
     color: var(--texto);
     text-align: justify;
