@@ -15,19 +15,15 @@
     --fundo-card: #ffffff;
 }
 
+main {
+    margin-bottom: 70px;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5em;
     color: var(--texto);
     background-color: var(--fundo-principal);
-}
-
-main {
-    display: grid;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 20px;
-    width: 100%;
 }
 
 section#ficha {
@@ -49,6 +45,12 @@ section#ficha img.foto {
     display: block;
     margin: auto;
     margin-bottom: 20px;
+}
+
+img.fotop {
+    width: 100px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 section#ficha h1 {
@@ -126,7 +128,7 @@ article h2 {
 #skill-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 25px;
     padding-bottom: 20px;
 }
 
@@ -160,6 +162,10 @@ article h2 {
     height: 100%;           /* Ocupa toda a altura da barra cinza */
     background-color:var(--destaque-inverso); /* Cor azul para o progresso (mude se quiser) */
     border-radius: 4px;
+}
+
+header {
+    display: none;
 }
 
 nav {
@@ -201,9 +207,9 @@ footer {
     main {
         display: grid;
         /* Define 300px fixos para o perfil e o resto (1fr) para os detalhes */
-        grid-template-columns: 400px 1fr; 
+        grid-template-columns:350px 1fr; 
         gap: 30px;                       
-        width: 95%; /* Ocupa 95% do ecrã de forma limpa */
+        width: 100%; /* Ocupa 95% do ecrã de forma limpa */
         max-width: 1200px;               
         margin: 20px auto;                  
         align-items: start;              
@@ -212,9 +218,9 @@ footer {
     section#ficha {
         grid-column: 1 / 2;              
         height: fit-content;
-        position: sticky;                
-        top: 100px;                       
+        position: sticky;                                   
     }
+    
 
     section#detalhes {
         grid-column: 2 / 3;              
@@ -256,8 +262,6 @@ footer {
      #projetos-container .projeto-info {
         max-width: 100%;}
 
-    
-
     footer {
 
         display: block;
@@ -267,8 +271,37 @@ footer {
         padding: 10px;
         width: 100vw;
         height: 80px;
-        margin-bottom: 50px;
 
+}
+
+header {
+    display: block;
+    width: 100vw;
+    z-index: 9999;                 /* Garante que fica sempre por cima do conteúdo */
+    color: var(--texto);
+    padding: 10px;
+    background-color: var(--destaque);
+}
+
+#cima ul {
+    list-style: none;
+    display: flex;
+    justify-content: right; /* Distribui os 5 itens igualmente pela largura */
+    gap: 40px;
+    padding-right: 58px;
+}
+
+
+#cima a {
+    display: flex;
+    flex-direction: column;        /* Alinha os elementos em linha vertical (coluna) */
+    align-items: center;           /* Centraliza o ícone e o texto horizontalmente entre si */
+    text-decoration: none;         /* Remove o sublinhado dos links */
+    color: var(--fundo-card);
+}
+
+nav {
+    display: none;
 }
 
 img.fotop {
