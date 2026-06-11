@@ -208,6 +208,14 @@ footer {
 
 @media screen and (min-width: 712px) {
 
+    /* Trava a rolagem da página inteira para permitir que apenas as colunas rolem */
+    body {
+        overflow: hidden; 
+        height: 100vh;
+        display: flex;
+        flex-direction: column; /* Alinha o bloco principal e o footer verticalmente */
+    }
+
     main {
         display: grid;
         /* Define 4000px fixos para o perfil e o resto (1fr) para os detalhes */
@@ -215,22 +223,28 @@ footer {
         gap: 30px;                       
         width: 100%; /* Ocupa 95% do ecrã de forma limpa */
         max-width: 1400px;               
-        margin: 20px auto;                  
-        align-items: start;            
+        margin: 20px auto;                                
+        align-items: stretch; /* Fundamental para o sticky funcionar corretamente */  
+        /* Força o main a ocupar exatamente a altura visível da tela, descontando margens */
+        height: calc(100vh - 40px);        
     }
 
     section#ficha {
-        grid-column: 1 / 2;              
-        height: fit-content;
-        position: sticky;                                   
+        grid-column: 1 / 2;  
+        height: 100%; /* Ocupa a altura total do main */            
+        /* Ativa a rolagem independente aqui: */
+        overflow-y: auto; 
+        padding-right: 10px; /* Espaço para a barra de rolagem não cobrir o texto */  
+        margin-bottom: 400px;                         
     }
-    
 
     section#detalhes {
         grid-column: 2 / 3;              
         width: 100%; /* Garante que os detalhes preencham a coluna 2 sem estourar */
-        height: fit-content;
-        position: sticky;  
+        height: 100%; /* Ocupa a altura total do main */
+        /* Ativa a rolagem independente aqui também: */
+        overflow-y: auto; 
+        padding-right: 10px;
     }
 
     /* CORRIGIDO: Removido o 97vw que jogava as skills para fora da tela */
@@ -280,63 +294,63 @@ footer {
 
 }
 
-header {
-    position: sticky;
-    top: 0;
-    display: block;
-    width: 100vw;
-    z-index: 9999;                 /* Garante que fica sempre por cima do conteúdo */
-    color: var(--texto);
-    padding: 5px;
-    background-color: var(--destaque);
-}
+    header {
+        position: sticky;
+        top: 0;
+        display: block;
+        width: 100vw;
+        z-index: 9999;                 /* Garante que fica sempre por cima do conteúdo */
+        color: var(--texto);
+        padding: 5px;
+        background-color: var(--destaque);
+    }
 
-#logo {
-    display: block;
-    max-width: 100px;
-    max-height: 40px;
-}
-
-
-menu {
-    padding-left: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
-
-#cima ul {
-    list-style: none;
-    display: flex;
-    justify-content: right; /* Distribui os 5 itens igualmente pela largura */
-    gap: 40px;
-    padding-right: 58px;
-}
+    #logo {
+        display: block;
+        max-width: 100px;
+        max-height: 40px;
+    }
 
 
-#cima a {
-    display: flex;
-    flex-direction: column;        /* Alinha os elementos em linha vertical (coluna) */
-    align-items: center;           /* Centraliza o ícone e o texto horizontalmente entre si */
-    text-decoration: none;         /* Remove o sublinhado dos links */
-    color: var(--fundo-card);
-}
+    menu {
+        padding-left: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
 
-nav {
-    display: none;
-}
+    #cima ul {
+        list-style: none;
+        display: flex;
+        justify-content: right; /* Distribui os 5 itens igualmente pela largura */
+        gap: 40px;
+        padding-right: 58px;
+    }
 
-img.fotop {
-    width: 100px;
-    overflow: hidden;
-    border-radius: 10px;
-}
 
-footer > p {
+    #cima a {
+        display: flex;
+        flex-direction: column;        /* Alinha os elementos em linha vertical (coluna) */
+        align-items: center;           /* Centraliza o ícone e o texto horizontalmente entre si */
+        text-decoration: none;         /* Remove o sublinhado dos links */
+        color: var(--fundo-card);
+    }
 
-padding-top: 10px;} 
-    /* ... seu código do footer e hover permanecem iguais ... */
+    nav {
+        display: none;
+    }
+
+    img.fotop {
+        width: 100px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    footer > p {
+
+    padding-top: 10px;} 
+        /* ... seu código do footer e hover permanecem iguais ... */
 }
 
 
