@@ -62,8 +62,6 @@ section#ficha img.foto {
     margin-bottom: 20px;
 }
 
-
-
 #logo {
     display: none;
 }
@@ -303,7 +301,7 @@ footer {
         width: 100%;
     }
 
-    #movel {
+    div#movel {
         display: none;
     }
 
