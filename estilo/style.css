@@ -176,7 +176,7 @@ article h2 {
 }
 
 /* Configuração da imagem do container*/
-img {
+ img {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
@@ -196,6 +196,15 @@ img {
     border-left: 5px solid var(--destaque-inverso);
 
 }
+
+footer {
+    background-color: var(--destaque);
+    color: var(--texto-inverso);
+    text-align: center;
+    padding: 15px;
+    width: 100vw;
+    height: 20px;
+    }
   
 nav {
     position: fixed;
@@ -204,11 +213,11 @@ nav {
     width: 100%;
     border-top: 1px solid #e0e0e0; /* Linha fina divisória */
     z-index: 9999;                 /* Garante que fica sempre por cima do conteúdo */
-    background-color: var(--destaque);
     color: var(--texto);
     padding-top: 10px;
+    background-color: var(--fundo-card);
+    box-shadow: 2px 2px 4px 5px var(--destaque-inverso);
 }
-
 
 #menu ul {
     list-style: none;
@@ -224,7 +233,7 @@ nav {
     flex-direction: column;        /* Alinha os elementos em linha vertical (coluna) */
     align-items: center;           /* Centraliza o ícone e o texto horizontalmente entre si */
     text-decoration: none;         /* Remove o sublinhado dos links */
-    color: var(--texto-inverso);
+    color: var(--destaque);
 }
 
 
@@ -235,31 +244,35 @@ nav {
         width: 97vw; /* Define a largura do container*/
     }
 
- #projetos-container .projeto {
-    transition: border-color 0.5s, border-width 0.5s;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 0px;
-}
+    #projetos-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 25px;
+    }
 
- #projetos-container .projeto:hover {
-    border-color: var(--destaque);
-    border-left-width: 15px;
-    cursor: pointer;
- }
+    #projetos-container .projeto {
+        transition: border-color 0.5s, border-width 0.5s;
+        display: flex;}
 
- #projetos-container .projeto-info {
-    max-width: 80%;
- }
+    #projetos-container .projeto:hover {
+        border-color: var(--destaque);
+        border-left-width: 15px;
+        cursor: pointer;}
 
-#projetos-container .foto {
-    aspect-ratio: 1/1;
-    max-width: 10%;
-    max-height: 500px;
- }
+    #projetos-container .projeto-info {
+        max-width: 100%;}
+
+    img {
+        max-height: 100px;
+        border-radius: 8px;
+        max-width: 140px;
+        overflow: hidden;
+        object-fit: cover; /* Garante que a imagem preencha o espaço sem amassar */
+        object-position: 0px 0px;/* Deslocamento: [Eixo X (Horizontal)] [Eixo Y (Vertical)] */
+        }
 
 }
 
