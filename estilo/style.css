@@ -30,6 +30,7 @@ main {
     align-items: flex-start;
     flex-wrap: nowrap;
     gap: 15px;
+    margin-bottom: 35px;
 }
 
 
