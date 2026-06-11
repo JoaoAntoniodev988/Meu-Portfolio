@@ -215,10 +215,41 @@ footer {
     main {
         display: grid;
         /* Define 400px fixos para o perfil e o resto (1fr) para os detalhes */
-        grid-template-columns: 500px 1fr; 
+        grid-template-columns: 450px 1fr; 
         gap: 10px;                       
-        width: 85vw; /* Ocupa 100% do ecrã de forma limpa */ 
-        margin: auto;                                        
+        width: 90%; /* Ocupa 100% do ecrã de forma limpa */ 
+        margin-top: 40px; 
+        margin-left: 75px; 
+         /* Força o main a ocupar exatamente a altura visível da tela (descontando topo/rodapé se houver) */
+        height: calc(100vh - 120px);
+        /* Impede que o main inteiro estique para baixo com o conteúdo */
+        overflow: hidden;                                     
+    }
+
+
+    /* 2. Configuração da seção que vai rolar sozinha */
+    section#ficha {
+        grid-column: 2 / 3; /* Posicionada na coluna da direita */
+        
+        /* Força a seção a usar toda a altura delimitada pelo main */
+        height: 100%; 
+        
+        /* MÁGICA AQUI: Ativa a rolagem vertical apenas dentro deste bloco */
+        overflow-y: auto; 
+        
+        /* Um pequeno espaçamento na direita para a barra de rolagem não esmagar o seu texto */
+        padding-right: 15px; 
+    }
+
+    /* 3. A outra seção também precisa de regras para se comportar bem */
+    section#detalhes {
+        grid-column: 1 / 2;
+        height: 100%;
+        
+        /* Se você quiser que ela TAMBÉM role de forma independente, mantenha a linha abaixo. 
+        Se quiser que ela fique estática, mude para overflow: hidden; */
+        overflow-y: auto; 
+        padding-right: 15px;
     }
 
     /* CORRIGIDO: Removido o 97vw que jogava as skills para fora da tela */
