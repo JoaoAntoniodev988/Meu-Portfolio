@@ -172,6 +172,27 @@ article h2 {
     padding-bottom: 20px;
 }
 
+    .wrapper-iframe {
+    width: 350px;  /* Largura da sua "janela" de visualização */
+    height: 200px; /* Altura da sua "janela" */
+    overflow: hidden; /* Esconde o que passar dos limites acima */
+    }
+
+    .wrapper-iframe iframe {
+    width: 500px;  /* Tamanho real que o site interno vai renderizar */
+    top: -150px;   /* Move o conteúdo interno para cima */
+    left: -400px;  /* Move o conteúdo interno para a esquerda */
+    border-top: 8px solid var(--destaque);
+    border-bottom: 8px solid var(--destaque);
+    }
+
+    .wrapper-iframe a {
+        text-decoration: none;
+        font-weight: bold;
+
+    }
+
+
 /* Alinha o nome (HTML 5) na esquerda e a porcentagem (90%) na direita */
 .info {
     display: flex;
