@@ -173,13 +173,14 @@ article h2 {
 }
 
     .wrapper-iframe {
-    width: 350px;  /* Largura da sua "janela" de visualização */
-    height: 200px; /* Altura da sua "janela" */
+    width: 100%;  /* Largura da sua "janela" de visualização */
+    height: 210px; /* Altura da sua "janela" */
     overflow: hidden; /* Esconde o que passar dos limites acima */
     }
 
     .wrapper-iframe iframe {
-    width: 500px;  /* Tamanho real que o site interno vai renderizar */
+    width: 100%;  /* Tamanho real que o site interno vai renderizar */
+    height: 90px;
     top: -150px;   /* Move o conteúdo interno para cima */
     left: -400px;  /* Move o conteúdo interno para a esquerda */
     border-top: 8px solid var(--destaque);
@@ -189,7 +190,6 @@ article h2 {
     .wrapper-iframe a {
         text-decoration: none;
         font-weight: bold;
-
     }
 
      .wrapper-iframe a:hover {
@@ -237,12 +237,10 @@ nav {
     bottom: 0;
     left: 0;
     width: 100%;
-    border-top: 1px solid #e0e0e0; /* Linha fina divisória */
     z-index: 9999;                 /* Garante que fica sempre por cima do conteúdo */
-    color: var(--texto);
     padding-top: 10px;
     background-color: var(--fundo-card);
-    box-shadow: 2px 2px 8px 5px var(--destaque-inverso);
+    box-shadow: 2px 2px 8px 5px #22222221;
 }
 
 #menu ul {
@@ -259,7 +257,11 @@ nav {
     flex-direction: column;        /* Alinha os elementos em linha vertical (coluna) */
     align-items: center;           /* Centraliza o ícone e o texto horizontalmente entre si */
     text-decoration: none;         /* Remove o sublinhado dos links */
-    color: var(--destaque);
+    color: var(--texto);
+}
+
+ i {
+    padding-bottom: 66px;
 }
 
 footer {
