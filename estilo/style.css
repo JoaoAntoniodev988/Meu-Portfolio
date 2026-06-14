@@ -23,6 +23,18 @@ body {
     background-color: var(--fundo-principal);
 }
 
+.telas-pequenas {
+    display: block;
+    padding: 5px 10px;
+    background-color: var(--destaque);
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    font-weight: bold;
+}
+
+
 main {
     display: flex;
     flex-direction: column-reverse;
@@ -39,6 +51,7 @@ section#ficha {
     padding: 20px;
     border-radius: 8px;
     grid-column: 2;
+    margin-top: 75px;
 }
 
 section#detalhes {
@@ -258,11 +271,10 @@ nav {
     align-items: center;           /* Centraliza o ícone e o texto horizontalmente entre si */
     text-decoration: none;         /* Remove o sublinhado dos links */
     color: var(--texto);
+    gap: 8px;
+    font-size: small;
 }
 
- i {
-    padding-bottom: 66px;
-}
 
 footer {
     display: none;
@@ -293,6 +305,7 @@ footer {
         overflow-y: auto; /* MÁGICA AQUI: Ativa a rolagem vertical apenas dentro deste bloco */
         padding-left: 95px;
         padding-right: 75px;
+        margin-top: 0px;
 
     }
 
