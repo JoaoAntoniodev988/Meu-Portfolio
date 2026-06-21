@@ -26,7 +26,7 @@ body {
 
 .telas-pequenas {
     display: block;
-    padding: 5px 10px;
+    padding: 10px 0px 5px 10px;
     background-color: var(--destaque);
     color: #ffffff;
     position: fixed;
@@ -341,6 +341,10 @@ footer {
 
     div#movel {
         display: none;
+    }
+
+    .conteudo {
+        background-color: white;
     }
 
     footer {

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos da Linguagem</title>
+    <link rel="stylesheet" href="styleferramentas.css">
+    <script src="https://kit.fontawesome.com/c99245ec2d.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #f5f5f5;
+    --texto: #000000;
+    --cor-principal: #f7df1e;
+    --fundo-card: #ffffff;
+    --cor-destaque: #fff1a2;
+}
+
+body {
+    background-color: var(--fundo);
+}
+
+header {
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: var(--cor-principal);
+}
+
+header p {
+    margin: auto;
+}
+
+section h2, h3, p {
+    margin: 10px;
+}
+
+.introdução {
+    background-color: var(--fundo-card);
+    margin: 0px 10px 45px 10px;
+    padding: 20px;
+}
+
+#destaque {
+    background-color: var(--cor-destaque);
+    margin: 0px 10px;
+    padding: 2px 20px;
+    border-radius: 10px;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;/* Garante que fica sempre por cima do conteúdo */
+    padding-top: 10px;
+    background-color: var(--fundo-card);
+    box-shadow: 2px 2px 8px 5px #22222221;
+   
+}
+
+#menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Distribui os 5 itens igualmente pela largura */
+    align-items: center;
+    height: 100%;/* Alinha verticalmente no centro da barra */
+}
+
+
+#menu a {
+    display: flex;
+    flex-direction: column;/* Alinha os elementos em linha vertical (coluna) */
+    align-items: center;/* Centraliza o ícone e o texto horizontalmente entre si */
+    text-decoration: none;/* Remove o sublinhado dos links */
+    color: var(--texto);
+    gap: 8px;
+    font-size: small;
+}
+    </style>
+</head>
+
+<body>
+    <header class="telas-pequenas">
+        <h1>JavaScript</h1>
+        <p>Desenvolvedor Web (988)</p>
+    </header>
+    <main>
+        <section class="introdução">
+            <h2>A diferencia entre javascript e EcmaScript</h2>
+            
+            <p>Para entender a diferença de forma bem simples, pense na relação entre o Português (a língua) e o Dicionário da Academia de Letras (as regras).</p>
+
+            <p><strong>ECMAScript</strong> é a regra (o padrão): É um documento oficial que dita como a linguagem deve funcionar. Ele diz quais palavras-chave existem, como os <strong>loops</strong> devem se comportar e quais são os <strong>tipos de dados</strong>. Ele existe apenas no papel.</p>
+
+            <p><strong>JavaScript </strong>é a língua (a implementação): É a linguagem real que você escreve no seu editor de código e que o navegador roda. O JavaScript segue as regras que o ECMAScript determinou.</p>
+
+            <h3>Uma Breve História (Para fazer sentido)</h3>
+
+            <p> Nos anos 90, o JavaScript foi criado para o navegador Netscape.Logo depois, a Microsoft criou a sua própria versão para o Internet Explorer, chamada JScript.</p>
+
+            <p>Como cada navegador começou a criar suas próprias regras, a internet virou uma bagunça (um código que funcionava em um navegador quebrava no outro).</p>
+            <p>Para resolver isso, eles pediram para uma organização internacional chamada ECMA padronizar a linguagem. Nasceu aí o ECMAScript.</p>
+
+            <h3>Por que você ouve falar tanto de "ES6", "ES7", etc.?</h3>
+
+            <p><strong>ES</strong> é a abreviação de EcmaScript. O número ao lado é a versão da regra.</p>
+
+            <p><strong>ES5 (2009):</strong> É o JavaScript mais antigo.</p>
+
+            <p><strong>ES6 / ES2015:</strong> Foi a maior atualização da história da linguagem. Ela mudou o JavaScript de patamar, trazendo coisas que usamos hoje como o let, const, as Arrow Functions e as Template Strings (as crases para textos).</p>
+
+            <p><strong>Atualizações Anuais:</strong> Hoje em dia, o comitê do ECMAScript lança uma versão nova todo ano (ES2024, ES2025, etc.) trazendo pequenas melhorias.</p>
+
+            
+            <aside id="destaque"><em>💡 <strong>Resumo da ópera:</strong> Você não precisa aprender duas coisas diferentes. Quando você estuda JavaScript moderno, você já está estudando as versões mais recentes do ECMAScript.</em></aside>
+    
+        </section>
+        <section ></section>
+
+
+    </main>
+
+        <nav id="menu">
+        <ul>
+            <li>
+                <a href="#"><i class="fa-regular fa-house"></i><span class="menu-texto">Início</span>
+            </a></li>
+
+            <li>
+                <a href="#skills"><i class="fa-solid fa-brain"></i><span class="menu-texto">Ferramentas</span></a></li>
+
+            <li>
+                <a href="#projetos"><i class="fa-solid fa-diagram-project"></i><span class="menu-texto">Projectos</span></a></li>
+
+        </ul>
+    </nav>
+
+</body>
