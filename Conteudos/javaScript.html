@@ -53,6 +53,12 @@ main ul {
     line-height: 20px;
 }
 
+main ol {
+    margin: 10px 10px;
+    padding: 2px 20px;
+    line-height: 20px;
+}
+
 #destaque {
     background-color: var(--cor-destaque);
     margin: 0px 10px;
@@ -163,8 +169,7 @@ nav {
             <p><strong>Não podem começar com números:</strong><br>
             Embora você possa usar números no nome da variável, eles nunca podem vir na primeira posição.</p>
 
-            <code>
-            <p><strong>JavaScript</strong></p>
+            <code><p><strong>JavaScript</strong></p>
             <p>const 1ano = 2026;  // ❌ Erro de Sintaxe! O JavaScript se confunde achando que é um número puro.</p>
             <p>const ano1 = 2026;  // ✅ Válido! O número no final ou meio é totalmente permitido.</p>
             </code>
@@ -185,8 +190,10 @@ nav {
 
             <p><strong>Não podem conter espaços</strong><br>
             Uma variável precisa ser uma palavra única e contínua. O computador não entende que duas palavras separadas por espaço pertencem ao mesmo nome.</p>
+
             <code><p><strong>JavaScript</strong></p>
             <p>const nome usuario = "Mariana"; // ❌ Erro de Sintaxe! O espaço quebra o código.</p></code>
+
             <p>Para resolver isso, a comunidade JavaScript usa um padrão chamado camelCase (onde a primeira palavra é minúscula e as seguintes começam com letra maiúscula, parecendo as corcovas de um camelo):</p>
             <code><p><strong>JavaScript</strong></p>
             <p>const nomeUsuario = "Mariana"; // ✅ Perfeito! Padrão camelCase.</p></code>
@@ -198,9 +205,9 @@ nav {
             <p>const let = 10;      // ❌ Erro! "let" é uma palavra reservada para criar variáveis.</p>
             <p>const function = 5;  // ❌ Erro! "function" é reservada para criar funções.</p>
             <p>const const = "Oi";  // ❌ Erro! "const" é reservada.</p></code>
-        </section>
-        <hr>
-        <section class="Tipos-de-dados">
+            </section>
+            <hr>
+            <section class="Tipos-de-dados">
             <h2>Tipos de Dados: O que vai dentro das variaveis</h2>
 
             <p><strong>number (Número):</strong> é Qualquer valor    numérico, seja positivo, negativo, inteiro ou decimal.
@@ -217,70 +224,335 @@ nav {
             <p>const resultado = 10 / 0;</p>
             <p>console.log(resultado); // Vai exibir: Infinity</p></code>
 
+            <p><strong>NaN (Not a Number / Não é um Número)</strong>: Ele serve para indicar que uma operação matemática falhou ou deu um resultado inválido/impossível. Apesar do nome significar "Não é um Número", o tipo dele para o JavaScript ainda é considerado um number especial! Se você tentar multiplicar um texto por um número. Exemplo:</p>
 
-            <p>
-                NaN (Not a Number / Não é um Número)
-                Apesar do nome significar "Não é um Número", o tipo dele para o JavaScript ainda é considerado um number especial!
-            </p>
-    • O que é: Ele serve para indicar que uma operação matemática falhou ou deu um resultado inválido/impossível.
-    • Exemplo: Se você tentar multiplicar um texto por um número:
-      JavaScript
-      const resultadoInvalido = "Olá" * 5; 
-      console.log(resultadoInvalido); // Vai exibir: NaN
-4. string (Texto)
-Como vimos antes, serve para qualquer cadeia de caracteres (letras, palavras, frases, códigos).
-    • O que é: Dados textuais que precisam estar envolvidos por aspas simples ('), duplas (") ou crases (` `).
-    • Exemplo:
-      JavaScript
-      const nome = 'Ana';
-      const frase = "Estou aprendendo JS";
-5. boolean (Booleano)
-O tipo de tomada do JavaScript: ou está ligado, ou está desligado.
-    • O que é: Um tipo de dado que só aceita dois valores possíveis: true (verdadeiro) ou false (falso).
-    • Exemplo:
-          JavaScript
-          const estaChovendo = false;
-          const maiorDeIdade = true;
-6. null (Nulo)
-O null representa a ausência intencional de um valor.
-    • O que é: Você usa o null quando quer dizer explicitamente para o computador: "Esta variável existe, mas ela está vazia de propósito neste momento".
-    • Exemplo: Um campo de "segundo nome" em um formulário que o usuário não preencheu.
-      JavaScript
-      let segundoNome = null; // O desenvolvedor definiu que está vazio
-7. undefined (Indefinido)
-O undefined significa que algo foi criado, mas nunca recebeu nenhum conteúdo.
-    • O que é: Ao contrário do null (que é intencional), o undefined é o padrão do JavaScript para variáveis que foram declaradas com let, mas não receberam nenhum valor inicial.
-    • Exemplo:
-          JavaScript
-          let minhaVariavel; 
-          console.log(minhaVariavel); // Vai exibir: undefined (porque não ganhou valor)
-8. object (Objeto)
-Aqui entramos nos tipos estruturais. Um objeto permite agrupar várias informações em um único lugar usando pares de chave: valor.
-    • O que é: Uma coleção de dados relacionados. É como uma ficha cadastral de alguma coisa do mundo real.
-    • Exemplo:
-          JavaScript
-          const carro = {
-              marca: "Toyota",
-              ano: 2024,
-              ligado: true
-          };
-9. Array (Lista)
-O Array é, na verdade, um tipo especial de Objeto, mas que funciona como uma lista ordenada.
-    • O que é: Uma caixa onde você coloca vários dados em fila, separados por vírgulas e envolvidos por colchetes [ ].
-    • Exemplo:
-          JavaScript
-          const frutas = ["Maçã", "Banana", "Morango"];
-          const numerosSorteados = [12, 45, 23, 8];
-10. function (Função)
-No JavaScript, as funções também são tratadas como um tipo de dado. Elas são blocos de código que realizam uma ação quando são chamadas.
-    • O que é: Um "verbo" ou uma "máquina" que processa dados e te devolve uma resposta. Você pode guardá-las dentro de variáveis se quiser.
-    • Exemplo:
-          JavaScript
-          function saudar() {
-              return "Olá, mundo!";
-          }
+            <code><p><strong>JavaScript</strong></p>
+            <p>const resultadoInvalido = "Olá" * 5; </p>
+            <p>console.log(resultadoInvalido); // Vai exibir: NaN</p></code>
+
+            <p><strong>string (Texto):</strong> são Dados textuais que precisam estar envolvidos por aspas simples ('), duplas (") ou crases (` `). Como vimos antes, serve para qualquer cadeia de caracteres (letras, palavras, frases, códigos). Exemplo:</p>
+
+            <code><p><strong>JavaScript</strong></p>
+            <p>const nome = 'Ana';</p>
+            <p>const frase = "Estou aprendendo JS";</p></code>
+
+            <p><strong>boolean (Booleano):</strong> Um tipo de dado que só aceita dois valores possíveis: true (verdadeiro) ou false (falso). O tipo de tomada do JavaScript: ou está ligado, ou está desligado. Exemplo:</p>
+
+            <code><p><strong>JavaScript</strong></p>
+            <p>const estaChovendo = false;</p>
+            <p>const maiorDeIdade = true;</p></code>
+
+            <p><strong>null (Nulo):</strong> Você usa o null quando quer dizer explicitamente para o computador: "Esta variável existe, mas ela está vazia de propósito neste momento". O null representa a ausência intencional de um valor. Exemplo: Um campo de "segundo nome" em um formulário que o usuário não preencheu.</p>
+
+            <code> <p><strong>JavaScript</strong></p>
+            <p>let segundoNome = null; // O desenvolvedor definiu que está vazio</p></code>
+
+            <p> <strong>undefined (Indefinido):</strong> Ao contrário do null (que é intencional), o undefined é o padrão do JavaScript para variáveis que foram declaradas com let, mas não receberam nenhum valor inicial. O undefined significa que algo foi criado, mas nunca recebeu nenhum conteúdo. Exemplo:</p> 
+
+            <code><p><strong>JavaScript</strong></p>
+            <p>let minhaVariavel;</p>
+            <p>console.log(minhaVariavel); // Vai exibir: undefined (porque não ganhou valor)</p></code>
+
+            <p><strong>object (Objeto):</strong> Uma coleção de dados relacionados. É como uma ficha cadastral de alguma coisa do mundo real. Aqui entramos nos tipos estruturais. Um objeto permite agrupar várias informações em um único lugar usando pares de chave: valor. Exemplo:</p>
+
+            <code><p><strong>JavaScript</strong></p>
+            <pre>  const carro = {
+        marca: "Toyota",
+        ano: 2024,
+        ligado: true
+    };</pre></code>
+
+            <p> <strong>Array (Lista):</strong> Uma caixa onde você coloca vários dados em fila, separados por vírgulas e envolvidos por colchetes [ ]. O Array é, na verdade, um tipo especial de Objeto, mas que funciona como uma lista ordenada.  Exemplo:</p>
+
+            <code><p><strong>JavaScript</strong></p>
+            <p>const frutas = ["Maçã", "Banana", "Morango"];</p>
+            <p>const numerosSorteados = [12, 45, 23, 8];</p></code>
+
+            <p><strong>function (Função):</strong> Um "verbo" ou uma "máquina" que processa dados e te devolve uma resposta. Você pode guardá-las dentro de variáveis se quiser. No JavaScript, as funções também são tratadas como um tipo de dado. Elas são blocos de código que realizam uma ação quando são chamadas. Exemplo: </p>
+
+            <code><p><strong>JavaScript</strong></p>
+            <pre>  function saudar() {
+        return "Olá, mundo!";
+    }
+            </pre></code>
+        </section>
+        <hr>
+        <section class="conversao-de-dados">
+            <h2>Conversão de Dados (Type Casting / Coercion)</h2>
+            
+            <p>Às vezes, você recebe um dado em um formato (como um texto vindo de um formulário), mas precisa dele em outro formato (como um número para fazer uma conta). No JavaScript, existem duas formas de conversão:</p>
+            
+            <h3>Conversão Explícita (Você força a mudança)</h3>
+            <p>É quando você usa comandos da linguagem para transformar o dado conscientemente.
+            Para Número: Usa-se <strong>Number()</strong>, <strong>parseInt()</strong> (para inteiros) ou <strong>parseFloat()</strong> (para decimais).
+            Para Texto: Usa-se <strong>String()</strong> ou o método <strong>.toString()</strong>.</p>
+
+            <code> <p><strong>JavaScript</strong></p>
+            <p>const textoIdade = "25";</p>
+            <p>const idadeNumero = Number(textoIdade); // Transforma em número real: 25</p>
+            <p>const numero = 100;</p>
+            <p>const numeroTexto = String(numero); // Transforma em texto: "100"</code></p>
+
+            <h3>Conversão Implícita (O JavaScript tenta adivinhar)</h3>
+            <p>O JavaScript é uma linguagem "compreensiva" até demais. Se você tentar somar um número com um texto, em vez de dar erro, ele converte o número em texto e junta os dois.</p>
+            <code><p><strong>JavaScript</strong></p>
+            <p>const resultado = "5" + 2;</p>
+            <p>console.log(resultado); // Vai exibir: "52" (Texto), e não 7!</p></code>
+        </section>
+
+        <hr>
+        <section>
+            <h2>Manipulação de Dados</h2>
+            <p>Manipular dados significa alterar o seu estado ou extrair informações úteis deles. Cada tipo de dado tem seus próprios "superpoderes" (métodos).</p>
+
+         <h3>Manipulando Strings (Textos)</h3>
+
+            <ul>
+                <li>Descobrir o tamanho <strong>(.length)</strong>: Conta quantos caracteres o texto tem.</li>
+                <li>Mudar a caixa <strong>(.toUpperCase() / .toLowerCase())</strong>: Deixar tudo em maiúsculo ou minúsculo.</li>
+                <li>Cortar pedaços <strong>(.slice())</strong>: Extrair apenas uma parte do texto.</li>
+            </ul>
+
+            <code>
+                <p><strong>JavaScript</strong></p>
+                <p>const frase = "JavaScript é incrível!";</p>
+                <p>console.log(frase.length);        // 22 (contando os espaços)</p>
+                <p>console.log(frase.toUpperCase()); // "JAVASCRIPT É INCRÍVEL!"</p>
+            </code>
+
+            <h3>Manipulando Números (Objeto Math)</h3>
+            <p>Para contas complexas ou ajustes, usamos o objeto nativo <strong>Math</strong>.</p>
+                <ul>
+                    <li>Arredondar: <strong>Math.round()</strong> (arredonda para o mais próximo)</li>
+                    <li><strong>Math.ceil()</strong> (para cima) ou <strong>Math.floor() </strong>(para baixo).</li>
+                    <li>Gerar número aleatório: <strong>Math.random()</strong>.</li>
+                </ul>
+
+            <code>
+                <p><strong>JavaScript</strong></p>
+                <p>const nota = 7.6;</p>
+                <p>console.log(Math.round(nota)); // 8</p>
+                <p>console.log(Math.floor(nota)); // 7</p>
+            </code>
+        </section>
+        <hr>
+
+        <section class="formatação-de-dados">
+            <h2>Formatação de Dados</h2>
+
+            <p>Formatar é preparar o texto para que ele seja exibido de forma bonita e legível para o usuário final.</p>
+
+            <h3>Formatação de String</h3>
+
+            <ul>
+                <li><p><strong>O Jeito Antigo:</strong> Concatenação. Juntar textos e variáveis usando o sinal de +. Costuma ficar confuso muito rápido.</p>
+
+            <code>
+                <p><strong>JavaScript</strong></p>
+                <p>const nome = "Carlos";</p>
+                <p>const tecnologia = "React";</p>
+                <p>console.log("O aluno " + nome + " está estudando " + tecnologia + ".");</p>
+            </code></li>
+
+                <li>  <p><strong>O Jeito Moderno:</strong> Template Strings (ES6). Usamos as crases (` `) e colocamos as variáveis dentro de ${}. O código fica muito mais limpo e aceita quebra de linhas.</p>
+
+            <code>
+                <p><strong>JavaScript</strong></p>
+                <p>const nome = "Carlos";</p>
+                <p>const tecnologia = "React"; // Muito mais fácil de ler e manter!</p>
+                <p>console.log(`O aluno ${nome} está estudando ${tecnologia}.`);</p>
+            </code>
+                </li>
+            </ul>
+          
+            
+            <h3>Formatação de Números</h3>
+            <p>Mostrar números brutos no sistema pode parecer pouco profissional (ex: 1250.5). Precisamos formatá-los para a realidade do usuário, como moedas ou casas decimais fixas.</p>
+
+            <ul>
+                <li><strong>Fixar Casas Decimais (.toFixed()):</strong> Determina quantas casas vão aparecer após o ponto. Atenção: este método transforma o número em uma string. 
+
+                    <code>
+                        <p><strong>JavaScript</strong></p>
+                        <p>const precoBruto = 19.99321;</p>
+                        console.log(precoBruto.toFixed(2)); // "19.99"
+                    </code>
+                </li><br>
+                <li> <strong>Formatação de Moedas e Regiões (Intl.NumberFormat):</strong>
+            A forma mais profissional e poderosa do JavaScript para formatar moedas, porcentagens e padrões de países automaticamente.
+            <code>
+                <p><strong>JavaScript</strong></p>
+                <p>
+                    const salario = 5000.50;
+                    // Formatando para o Real Brasileiro (R$)
+                </p>
+                <p>
+                    const formatadorReal = new Intl.NumberFormat('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL'
+                    });
+                </p>
+                <p>console.log(formatadorReal.format(salario)); // Exibe: R$ 5.000,50</p>
+                
+            </code>
+
+                </li>
+                
+            </ul>
+
+            <p>Esses quatro pontos dão a você o controle total sobre as informações que entram e saem do seu programa.</p>
+        </section>
+
+        <section class="operadores">
+            <h2>Operadores</h2>
+            <ul>
+                <li><strong>Operadores Aritméticos</strong>: São os operadores matemáticos clássicos que usamos para fazer cálculos.
+                    <p>Os Símbolos: <br></p>
+                        <ul>
+                            <li><strong>+</strong> (Adição) / <strong>- </strong>(Subtração)</li>
+                            <li><strong>* </strong>(Multiplicação) / <strong>/ </strong>(Divisão)</li>
+                            <li><strong>% </strong>(Módulo / Resto da divisão): Muito usado para descobrir se um número é par ou ímpar.</li>
+                            <li><strong>** </strong>(Exponenciação): Elevar um número a uma potência.</li>
+                        </ul>
+
+                    Exemplo: <br>
+                    <code>
+                        <p><strong>JavaScript</strong></p>
+                        <p>const resto = 11 % 2; // O resultado é 1 (porque 11 dividido por 2 dá 5 e sobra 1)</p>
+                        <p>const quadrado = 3 ** 2; // 3 elevado a 2 = 9</p>
+                    </code></li>
+
+                <li><strong>Operadores Relacionais (Comparação)</strong>: Servem para comparar dois valores e avaliar a relação entre eles. O resultado dessa comparação é sempre um booleano (true ou false). 
+                    <p>Os Símbolos:</p>
+                    <ul>
+                        <li> <strong>> </strong>(Maior que) / <strong> < </strong>(Menor que)</li>
+                        <li> <strong>>=</strong> (Maior ou igual) / <strong><=</strong> (Menor ou igual)</li>
+                        <li><strong>==</strong> (Igualdade ampla): Compara apenas o valor, ignorando o tipo de dado. (Evite usar)</li>
+                        <li><strong>=== </strong>(Igualdade estrita): Compara o valor E o tipo de dado. (Sempre use este)</li>
+                        <li><strong>!== </strong>(Diferente estrito): Verifica se os valores ou tipos são diferentes.</li>
+                    </ul>
+                 
+                    <p>Exemplo:</p>
+                    <code>
+                        <p><strong>JavaScript</strong></p>
+                        <p>console.log(5 == "5");  // true (o JS converte o texto para número antes de comparar)</p>
+                        <p>console.log(5 === "5"); // false (são iguais no valor, mas um é Number e o outro é String)</p>
+                    </code> </li>
+
+                <li><strong>Operadores Lógicos</strong>: Servem para combinar várias comparações relacionais e criar regras de negócio mais complexas.  
+                    <p>Os Símbolos:</p>
+                    <ul>
+                        <li>&& (E / AND): A frase inteira só é verdade se tudo for verdade.</li>
+                        <li>|| (OU / OR): A frase inteira é verdade se pelo menos um elemento for verdade.</li>
+                        <li>! (NÃO / NOT): Inverte o booleano. Se algo era true, vira false.</li>
+                    </ul>
+
+                <p>Exemplo:</p>
+                    <code>
+                        <p><strong>JavaScript</strong></p>
+                        <p>const temIdade = true;</p>
+                        <p>const temPermissaoDosPais = false; 
+                        <p>// O jovem pode viajar se tiver idade OU a permissão</p></p>
+                        <p>const podeViajar = temIdade || temPermissaoDosPais; // true</p>
+                    </code></li>
+                <li><strong>Operador Ternário</strong>: O operador ternário é um atalho elegante para criar uma estrutura de decisão rápida (um if / else de uma linha só). Ele recebe esse nome porque é o único operador do JavaScript que usa três argumentos. 
+                    <p>A Estrutura: condição ? valor_se_verdade : valor_se_falso;</p>
+                <p>Exemplo:</p>
+                    <code>
+                        <p><strong>JavaScript</strong></p>
+                        <p>const idade = 20;</p>
+                        <p>// Se idade for maior ou igual a 18, retorna "Maior de idade", senão retorna "Menor de idade"</p>
+                        <p>const status = idade >= 18 ? "Maior de idade" : "Menor de idade";</p>
+                        <p>console.log(status); // "Maior de idade"</p>
+                    </code>
+                O operador ternário e os operadores relacionais (===) são os que os iniciantes mais demoram para se acostumar, mas são os mais usados no dia a dia.</li>
+
+                <li><strong>Operadores de Atribuição</strong>: Servem para guardar ou atualizar o valor de uma variável. O operador básico você já conhece: o sinal de igual (=). Mas existem atalhos inteligentes: 
+                <p>Os Símbolos:</p>
+                <ul>
+                    <li> = (Atribuição simples)</li>
+                    <li> += (Soma e atribui): Pega o valor atual e soma mais um tanto.</li>
+                    <li> -= (Subtrai e atribui)</li>
+                    <li> *= (Multiplica e atribui)</li>
+                </ul>
+                <p>Exemplo:</p>
+                    <code>
+                        <p><strong>JavaScript</strong></p>
+                        <p>let pontos = 10;</p>
+                        
+                        <p>// O jeito longo: pontos = pontos + 5;</p>
+                        <p>// O jeito inteligente (Operador de Atribuição):</p>
+
+                        <p>pontos += 5; // Agora pontos vale 15</p>
+                    </code></li>
+                <li><strong>Operadores de Atribuição Composta</strong>: Operadores de Atribuição Composta (ou simplesmente "simplificação de atribuição"). Em programação, passamos muito tempo atualizando o valor de uma variável com base no valor que ela já possuía antes. O JavaScript nos oferece esse "atalho"  para não termos que repetir o nome da variável duas vezes. 
+                    <p>Assumindo que começamos com let n = 3: 
+
+                        <ol>
+                            <li>Adição Simplificada (+=)
+                                <ul>
+                                    <li>Forma longa: n = n + 4 (Pega o valor atual de n, que é 3, soma 4 e guarda o resultado 7 de volta em n).</li>
+                                    <li>Forma simplificada: n += 4</li>
+                                    <li>Resultado: 7</li>
+                                </ul>
+                            </li>
+                            <li> Subtração Simplificada (-=)
+                                <ul>
+                                    <li>Forma longa: n = n - 5 (Pega o valor atual de n, subtrai 5 e guarda o resultado).</li>
+                                    <li>Forma simplificada: n -= 5</li>
+                                    <li>Resultado: Se n era 7, 7 - 5 = 2.</li>
+                                </ul>
+                            </li>
+
+                            <li>Multiplicação Simplificada (*=)
+                                <ul>
+                                    <li>Forma longa: n = n * 4 (Multiplica o valor atual por 4).</li>
+                                    <li>Forma simplificada: n *= 4</li>
+                                    <li>Resultado: Se n era 2, 2 * 4 = 8.</li>
+                                </ul>
+                            </li>
+
+                            <li>Divisão Simplificada (/=)
+                                <ul>
+                                    <li>Forma longa: n = n / 2 (Divide o valor atual por 2).</li>
+                                    <li>Forma simplificada: n /= 2</li>
+                                    <li>Resultado: Se n era 8, 8 / 2 = 4.</li>
+                                </ul>
+                            </li>
+
+                            <li>Exponenciação Simplificada (=)
+                                <ul>
+                                    <li>Forma longa: n = n 2 (Eleva o valor de n ao quadrado).</li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            • 
+                            • Forma simplificada: n = 2
+                            • Resultado: Se n era 4, 4 2 (4 elevado a 2) = 16.</li>
+
+                            <li>Módulo Simplificado (%=)
+                • Forma longa: n = n % 5 (Pega o resto da divisão de n por 5).
+                • Forma simplificada: n %= 5
+                • Resultado: Se n era 16, ao dividir 16 por 5 dá 3 (que dá 15) e resta 1. Logo, o resultado é 1.  💡 Por que os programadores usam isso?
+            No dia a dia, você verá quase todo mundo usando a versão da direita. Ela deixa o código mais limpo, mais rápido de ler e evita erros de digitação quando as variáveis possuem nomes longos, como:
+            JavaScript
+            // Ruim / Longo
+            quantidadeItensNoCarrinho = quantidadeItensNoCarrinho + 1;
+
+            // Lindo / Simplificado
+            quantidadeItensNoCarrinho += 1;</li>
+                        </ol>
+        
+            3. 
+            4. 
+            5. 
+            6. 
+           </p> </li>
+            </ul>
+
 
         </section>
+    
 
 
     </main>
