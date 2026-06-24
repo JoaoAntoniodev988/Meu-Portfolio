@@ -44,18 +44,18 @@ section h2, h3, p {
 main {
     background-color: var(--fundo-card);
     margin: 10px 10px 45px 10px;
-    padding: 20px;
+    padding:10px;
 }
 
 main ul {
     margin: 10px 10px;
-    padding: 2px 20px;
+    padding: 2px 5px 2px 16px;
     line-height: 20px;
 }
 
 main ol {
     margin: 10px 10px;
-    padding: 2px 20px;
+    padding: 2px 5px 2px 16px;
     line-height: 20px;
 }
 
@@ -678,10 +678,13 @@ nav {
                 <code>
                     <p><strong>JavaScript</strong></p>
                     <p>const botao = document.querySelector("#meu-botao");</p>
-                    <p>// Criando a função de ação</p> <pre> function darBoasVindas() {
-        alert("Você clicou no botão! Parabéns!");
-    }
-</pre>
+                    <p>// Criando a função de ação</p> 
+                    <p>
+                        function darBoasVindas() {
+                            alert("Você clicou no botão! Parabéns!");
+                        }
+                    </p>
+
 
                 <p>// Dizendo ao botão para escutar o "click" e rodar a função</p>
                 </code>
@@ -704,27 +707,113 @@ nav {
 
                 <p>Esse mapa tem o formato de uma árvore genealógica invertida, onde tudo nasce de uma única raiz e vai se dividindo em galhos (ramos) e folhas. Cada elemento, texto ou atributo do seu HTML se transforma em um Nó (Node) dentro dessa árvore. Veja como o navegador organiza essa hierarquia:</p>
 
-                <div style="width: 70vw;"><img src="../imagem/screen.jpg" alt="foto" style="width: 100%; margin: auto; padding-left: 10px;"></div>
-                
-                    1. A Raiz (document)
-                É a base de tudo. O objeto document é o ponto de partida para qualquer coisa que você queira fazer no JavaScript. Se você quer tocar em um botão, você tem que pedir licença ao document primeiro.
-                    2. O Elemento Raiz (<html>)
-                É o primeiro galho real da árvore. Ele engloba absolutamente tudo o que existe na sua página.
-                    3. Os Elementos Pais (Parents)
-                São as tags que possuem outras tags dentro delas. No nível principal, o <html> se divide em dois filhos grandes:
-                    • <head> (informações de bastidores, como o título da aba).
-                    • <body> (tudo o que o usuário realmente vê na tela).
-                    4. Os Elementos Filhos (Children) e Irmãos (Siblings)
-                As tags dentro do <body> continuam se ramificando.
-                    • Se você tem uma tag <div> e dentro dela um <h1> e um <p>, a <div> é a mãe/pai, enquanto o <h1> e o <p> são filhos entre si e irmãos um do outro.
-                Como o HTML se transforma em Árvore (Na Prática)
-                Se você escrever este código HTML simples:
+                <ol>
+                    <li><p><strong>A Raiz (document)</strong></p>
+                É a base de tudo. O objeto document é o ponto de partida para qualquer coisa que você queira fazer no JavaScript. Se você quer tocar em um botão, você tem que pedir licença ao document primeiro.</li>
 
-                imagem
+                    <li><p><strong>O Elemento Raiz (html)</strong></p>
+                É o primeiro galho real da árvore. Ele engloba absolutamente tudo o que existe na sua página.</li>
 
-                Por que essa estrutura é tão importante?
-                O JavaScript só consegue navegar pela sua página porque o DOM é uma árvore organizada. Isso permite que você use a lógica de "andar pelos galhos" usando código. Por exemplo, você pode dizer ao JavaScript: "Ache o elemento <body>, pegue o primeiro filho dele (que é o <h1>) e mude a cor dele para azul."
-                        </section>
+                    <li><p><strong>Os Elementos Pais (Parents)</strong></p>
+                São as tags que possuem outras tags dentro delas. No nível principal, o (html) se divide em dois filhos grandes:
+
+                        <ul>
+                            <li> (head) (informações de bastidores, como o título da aba).</li><br>
+                            <li>(body) (tudo o que o usuário realmente vê na tela).</li>
+                        </ul>
+                    </li>
+
+                    <li><p><strong>Os Elementos Filhos (Children) e Irmãos (Siblings)</strong></p>
+                As tags dentro do (body) continuam se ramificando.
+                Se você tem uma tag (div) e dentro dela um (h1) e um (p), a (div) é a mãe/pai, enquanto o (h1) e o (p) são filhos entre si e irmãos um do outro.</li>
+
+                <p>
+                    Como o HTML se transforma em Árvore (Na Prática)
+                    Se você escrever este código HTML simples:
+                </p>
+
+                <div class="imagem" style="width: 90vw;"><img src="../imagem/screen.jpg" alt="foto" style="max-width: 250px; margin: auto; padding-left: 10px;"></div>
+                </ol>
+
+                <h3>Por que essa estrutura é tão importante?</h3>
+                <p>O JavaScript só consegue navegar pela sua página porque o DOM é uma árvore organizada. Isso permite que você use a lógica de "andar pelos galhos" usando código. Por exemplo, você pode dizer ao JavaScript: "Ache o elemento (body), pegue o primeiro filho dele (que é o (h1)) e mude a cor dele para azul."</p>
+            </section>
+
+            <section class="tratamento-de-eventos">
+                <h2>Tratamento de Eventos no DOM: Guia Completo de Engenharia Front-End</h2>
+               
+                <p>No ecossistema da Web, um Evento é um sinal emitido pelo navegador para notificar a sua aplicação de que algo relevante aconteceu. Essas interações podem ser disparadas diretamente pelo usuário (como cliques e digitação) ou pelo próprio ciclo de vida do navegador (como o término do carregamento de uma página ou falhas de rede).</p>
+                <p>O DOM funciona em um modelo assíncrono baseado no padrão de arquitetura Observer (Publish-Subscribe): o navegador publica o evento, e o seu código Javascript se inscreve para "escutar" e reagir a esse disparo através de funções chamadas Event Listeners (ou Event Handlers).</p>
+
+                <h3>Métodos de Vinculação (Como Escutar Eventos)</h3>
+                <p>A evolução do desenvolvimento web gerou três maneiras de conectar um evento ao código Javascript. Compreender a diferença entre elas é crucial para a manutenção de código limpo.</p>
+
+                <ul>
+                    <li><strong>Atributos Inline (Má Prática / Legado):</strong> O código Javascript é injetado diretamente dentro da tag HTML. 
+                    
+                    <p><strong>Desvantagem:</strong> Quebra o princípio de separação de conceitos (HTML para estrutura, JS para comportamento), polui o código e dificulta testes automatizados.</p> 
+                        <p>HTML</p><p>&#x3C;button onclick=&#x22;alert(&#x27;Clicou!&#x27;)&#x22;&#x3E;Enviar&#x3C;/button&#x3E;&#x3C;/p&#x3E;</p></li>
+
+                    <li><strong>Propriedades do Elemento (DOM Level 0):</strong>  O evento é atribuído como uma propriedade do objeto gerado pelo DOM.
+                    <p><strong>Limitação:</strong> Você só pode atribuir uma única função por tipo de evento. Se outra parte do script tentar assinar o mesmo evento, ela irá sobrescrever a função anterior.</p> 
+                    
+                        <code>
+                        <p>
+                            <pre style="white-space: pre-wrap; word-break: break-all;"> <strong>JavaScript</strong>
+const botao = document.querySelector('button');
+botao.onclick = function() { console.log("Ação 1"); };
+botao.onclick = function() { console.log("Ação 2"); }; // Sobrescreveu a Ação 1!
+                            </pre>
+                        </p>
+                        </code></li>
+                    <li><strong>addEventListener (Padrão Moderno - DOM Level 2):</strong>
+                É o método recomendado pela W3C. Ele aceita o tipo do evento, a função de callback e um objeto opcional de configurações.</li>
+                    <li></li>
+                </ul>
+
+               
+                    • Vantagens: Permite adicionar múltiplos ouvintes ao mesmo evento, oferece controle fino de propagação e permite a remoção limpa do ouvinte usando removeEventListener.
+                JavaScript
+                const botao = document.querySelector('button');
+
+                function dispararLog() { console.log("Botão acionado!"); }
+                // Adicionando o ouvinte
+                botao.addEventListener('click', dispararLog);
+                // Removendo quando não for mais necessário (evita vazamento de memória)
+                botao.removeEventListener('click', dispararLog);
+                3. O Fluxo de Propriação: Event Bubbling e Capturing
+                Quando um evento acontece em um elemento do DOM, ele não afeta apenas aquele elemento isolado. Ele viaja por toda a árvore de elementos. Esse comportamento segue um fluxo oficial dividido em 3 fases essenciais:
+                As Três Fases:
+                    1. Fase de Captura (Capture Phase): O evento desce a árvore do DOM, partindo do elemento raiz (window, document, <body>) até chegar bem perto do elemento real que sofreu a ação.
+                    2. Fase de Alvo (Target Phase): O navegador detecta que chegou ao elemento exato onde a ação ocorreu (ex: o <a> ou <button> clicado) e dispara o gatilho nele.
+                    3. Fase de Borbulhamento (Bubbling Phase): O evento faz o caminho inverso: ele sobe de volta pela árvore do DOM, do elemento filho até a raiz, disparando os ouvintes de todos os elementos pais no caminho. Este é o comportamento padrão do navegador.
+                Controlando o Fluxo com Código
+                O objeto de evento (event) nos dá ferramentas para gerenciar e interromper essa viagem na árvore:
+                    • event.stopPropagation(): Interrompe o borbulhamento imediatamente. Se você clicar em um botão interno, o evento não subirá para a <div> mãe. Muito útil para janelas modais ou menus drop-down onde o clique de dentro não deve fechar a caixa externa.
+                    • event.stopImmediatePropagation(): Além de impedir o evento de subir para os pais, ele impede que outros listeners configurados no mesmo elemento atual executem.
+                4. O Objeto do Evento (Event Object)
+                Sempre que um callback é executado, o navegador injeta automaticamente um argumento contendo uma coleção rica de metadados sobre o ocorrido. Por convenção de código, os desenvolvedores capturam essa variável nomeando-a como e, evt ou event.
+                Propriedades e Métodos Fundamentais:
+                    • e.target: Faz referência ao elemento exato que disparou o evento (onde o usuário realmente interagiu, ex: a imagem dentro de um botão).
+                    • e.currentTarget: Faz referência ao elemento que está escutando o evento (onde o .addEventListener foi atrelado). Eles podem ser diferentes devido ao efeito de borbulhamento.
+                    • e.type: Retorna uma string com o nome do evento executado (ex: "click", "keyup").
+                    • e.preventDefault(): Cancela o comportamento nativo padrão que o navegador executaria para aquela tag. Exemplos: impede uma tag <a> de redirecionar a URL ou impede um <form> de recarregar a página ao enviar dados.
+                5. Delegação de Eventos (Event Delegation)
+                Em aplicações robustas e dinâmicas (como listas infinitas ou e-commerces onde itens entram e saem da tela a todo momento), adicionar um .addEventListener para cada botão individual prejudica o consumo de memória do dispositivo.
+                A técnica de Delegação de Eventos resolve isso aproveitando o mecanismo de Event Bubbling. Em vez de ouvir os filhos, nós penduramos um único ouvinte no elemento pai e inspecionamos quem disparou a ação usando e.target.
+                Exemplo Prático de Arquitetura Limpa:
+                JavaScript
+                // Capturamos a lista (Pai) e não os itens (Filhos)
+                const listaProdutos = document.querySelector('#lista-produtos');
+
+                listaProdutos.addEventListener('click', function(e) {
+                    // Verifica se o clique aconteceu de fato em um botão de exclusão
+                    if (e.target && e.target.classList.contains('btn-deletar')) {
+                        const idProduto = e.target.dataset.id;
+                        console.log(`Produto ${idProduto} removido com sucesso!`);
+                    }
+                });
+            </section>
     
 
 
