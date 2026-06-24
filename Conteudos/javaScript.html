@@ -236,24 +236,24 @@ nav {
             <p>const nome = 'Ana';</p>
             <p>const frase = "Estou aprendendo JS";</p></code>
 
-            <p><strong>boolean (Booleano):</strong> Um tipo de dado que só aceita dois valores possíveis: true (verdadeiro) ou false (falso). O tipo de tomada do JavaScript: ou está ligado, ou está desligado. Exemplo:</p>
+            <p><strong>boolean (Booleano):</strong> É um tipo de dado que só aceita dois valores possíveis: true (verdadeiro) ou false (falso). O tipo de tomada do JavaScript: ou está ligado, ou está desligado. Exemplo:</p>
 
             <code><p><strong>JavaScript</strong></p>
             <p>const estaChovendo = false;</p>
             <p>const maiorDeIdade = true;</p></code>
 
-            <p><strong>null (Nulo):</strong> Você usa o null quando quer dizer explicitamente para o computador: "Esta variável existe, mas ela está vazia de propósito neste momento". O null representa a ausência intencional de um valor. Exemplo: Um campo de "segundo nome" em um formulário que o usuário não preencheu.</p>
+            <p><strong>null (Nulo):</strong> Usa-se o null quando quer dizer explicitamente para o computador: <strong>"Esta variável existe, mas ela está vazia de propósito neste momento"</strong>. O null representa a ausência intencional de um valor. Exemplo: Um campo de "segundo nome" em um formulário que o usuário não preencheu.</p>
 
             <code> <p><strong>JavaScript</strong></p>
             <p>let segundoNome = null; // O desenvolvedor definiu que está vazio</p></code>
 
-            <p> <strong>undefined (Indefinido):</strong> Ao contrário do null (que é intencional), o undefined é o padrão do JavaScript para variáveis que foram declaradas com let, mas não receberam nenhum valor inicial. O undefined significa que algo foi criado, mas nunca recebeu nenhum conteúdo. Exemplo:</p> 
+            <p> <strong>undefined (Indefinido):</strong> Ao contrário do null (que é intencional), o undefined é o padrão do JavaScript para variáveis que foram declaradas com let, mas não receberam nenhum valor inicial. O undefined significa que algo foi criado, mas nunca recebeu nenhum conteúdo.</p> 
 
             <code><p><strong>JavaScript</strong></p>
             <p>let minhaVariavel;</p>
             <p>console.log(minhaVariavel); // Vai exibir: undefined (porque não ganhou valor)</p></code>
 
-            <p><strong>object (Objeto):</strong> Uma coleção de dados relacionados. É como uma ficha cadastral de alguma coisa do mundo real. Aqui entramos nos tipos estruturais. Um objeto permite agrupar várias informações em um único lugar usando pares de chave: valor. Exemplo:</p>
+            <p><strong>object (Objeto):</strong> É uma coleção de dados relacionados. É como uma ficha cadastral de alguma coisa do mundo real. Aqui entramos nos tipos estruturais. Um objeto permite agrupar várias informações em um único lugar usando pares de chave: valor.</p>
 
             <code><p><strong>JavaScript</strong></p>
             <pre>  const carro = {
@@ -262,13 +262,13 @@ nav {
         ligado: true
     };</pre></code>
 
-            <p> <strong>Array (Lista):</strong> Uma caixa onde você coloca vários dados em fila, separados por vírgulas e envolvidos por colchetes [ ]. O Array é, na verdade, um tipo especial de Objeto, mas que funciona como uma lista ordenada.  Exemplo:</p>
+            <p> <strong>Array (Lista):</strong> É uma caixa onde você coloca vários dados em fila, separados por vírgulas e envolvidos por colchetes [ ]. O Array é, na verdade, um tipo especial de Objeto, mas que funciona como uma lista ordenada.  Exemplo:</p>
 
             <code><p><strong>JavaScript</strong></p>
             <p>const frutas = ["Maçã", "Banana", "Morango"];</p>
             <p>const numerosSorteados = [12, 45, 23, 8];</p></code>
 
-            <p><strong>function (Função):</strong> Um "verbo" ou uma "máquina" que processa dados e te devolve uma resposta. Você pode guardá-las dentro de variáveis se quiser. No JavaScript, as funções também são tratadas como um tipo de dado. Elas são blocos de código que realizam uma ação quando são chamadas. Exemplo: </p>
+            <p><strong>function (Função):</strong> É um "verbo" ou uma "máquina" que processa dados e te devolve uma resposta. Você pode guardá-las dentro de variáveis se quiser. No JavaScript, as funções também são tratadas como um tipo de dado. Elas são blocos de código que realizam uma ação quando são chamadas. </p>
 
             <code><p><strong>JavaScript</strong></p>
             <pre>  function saudar() {
@@ -687,6 +687,7 @@ nav {
                 </code>
 
                 <p>botao.addEventListener("click", darBoasVindas);</p>
+
                 <aside id="destaque">
                     <p>🚀 <strong>Resumo do Fluxo do DOM</strong></p>
                     Toda e qualquer interatividade que você vê na internet hoje segue este mesmo ciclo de 3 passos:
@@ -694,15 +695,16 @@ nav {
                         <li> <strong>Selecionar:</strong> O JS encontra o elemento (ex: o botão do carrinho de compras).</li>
                         <li><strong>Escutar:</strong> O JS espera a ação do usuário (ex: o clique no botão).</li>
                         <li><strong>Executar:</strong> O JS roda uma função que altera a página (ex: adiciona "+1" no ícone do carrinho).</li>
-                    </ol>
-                       
-                        
-                        
+                    </ol>  
                 </aside>
 
                 <h2>Arvore DOM</h2>
+
                 <p>Para entender a Árvore DOM (DOM Tree), imagine que o navegador é um tradutor. Ele pega o arquivo de texto bruto (o seu código HTML) e o transforma em um grande mapa ramificado cheio de conexões.</p>
+
                 <p>Esse mapa tem o formato de uma árvore genealógica invertida, onde tudo nasce de uma única raiz e vai se dividindo em galhos (ramos) e folhas. Cada elemento, texto ou atributo do seu HTML se transforma em um Nó (Node) dentro dessa árvore. Veja como o navegador organiza essa hierarquia:</p>
+
+                <div style="width: 70vw;"><img src="../imagem/screen.jpg" alt="foto" style="width: 100%; margin: auto; padding-left: 10px;"></div>
                 
                     1. A Raiz (document)
                 É a base de tudo. O objeto document é o ponto de partida para qualquer coisa que você queira fazer no JavaScript. Se você quer tocar em um botão, você tem que pedir licença ao document primeiro.
