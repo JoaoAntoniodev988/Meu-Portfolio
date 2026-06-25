@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundamentos da Linguagem</title>
     <link rel="stylesheet" href="styleferramentas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c99245ec2d.js" crossorigin="anonymous"></script>
+    
 <style>
         * {
     margin: 0;
@@ -21,7 +25,10 @@
     --cor-destaque: #fff1a2;
 }
 
+/* Definições gerais para o corpo do app */
 body {
+    font-family: 'Montsserat';
+    line-height: 1.2;
     background-color: var(--fundo);
 }
 
@@ -30,52 +37,57 @@ header {
     position: sticky;
     top: 0;
     background-color: var(--cor-principal);
+    font-family: 'Inter', sans-serif;
+    font-size: small;
 }
 
-header p {
-    margin: auto;
+main {
+   margin: 20px;
 }
 
-main h1, h2 {
-    margin: 10px;
+main h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold; /* Deixa o título marcante */
+    letter-spacing: -0.02em; /* Truque de design: títulos modernos ficam mais bonitos com letras levemente mais juntas */
+    font-size: 11pt;
+    margin-bottom: 10px;
 }
 
+main p {
+    margin: 5px 0px;
+}
+
+ main ul {
+    margin: 0px 8px;
+}
 article  {
-  
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: normal;
     column-gap: 40px;
-    min-height: 200px;
+    min-height: 100px;
     background-color: white;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.185);
     border-radius: 10px;
+    font-family: var(--texto-menu);
 }
 
 .cima {
-    order: 0;
     flex: 1 0 auto;
-    align-self: auto;
     font-size: 10pt;
-
+    margin: 10px;
 }
 
 .cima h2 {
-    padding: 10px;
-}
-.footer-div {
-    order: 0;
-    flex: 0 0 auto;
-    align-self: auto;
-    background-color: #f7df1e;
-    padding-bottom: 10px;
-    border-radius: 10px;
+    margin: 0;
 }
 
-.footer-div p {
-    padding: 15px;
+.footer-div {
+    background-color: #f7df1e;
+    border-radius: 10px;
+    padding: 10px 15px;
     font-size: small;
 }
 
@@ -84,17 +96,19 @@ a {
     color: #000000;
 }
 
-main {
-    padding:20px;
-}
 
-/* main ul {
-    margin: 10px 10px;
-    padding: 2px 5px 2px 16px;
-    line-height: 20px;
-}
+/* Seus blocos de código JavaScript 
+pre, code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+}*/
 
-main ol {
+
+
+
+
+
+/* main ol {
     margin: 10px 10px;
     padding: 2px 5px 2px 16px;
     line-height: 20px;
@@ -112,7 +126,7 @@ pre {
     margin: 0px 10px;
     padding: 2px 20px;
     border-radius: 10px;
-} */
+}  */
 
 nav {
     position: fixed;
@@ -134,7 +148,6 @@ nav {
     height: 100%;/* Alinha verticalmente no centro da barra */
 }
 
-
 #menu a {
     display: flex;
     flex-direction: column;/* Alinha os elementos em linha vertical (coluna) */
@@ -149,16 +162,15 @@ nav {
 <body>
     <header class="telas-pequenas">
         <h1>JavaScript</h1>
-        <p>Desenvolvedor Web (988)</p>
+        <p>Intermédiario</p>
     </header>
     <main>
-        <h1>JavaScript Intermédiario</h1>
         <h2>Temas</h2>
         <a href="javaScript.html">
             <article class="indice">
                     <div class="cima"><h2>A diferencia entre javascript e EcmaScript</h2></div>
                     <footer class="footer-div">
-                        <p>Para entender a diferença de forma bem simples, pense na relação entre o Português (a língua) e o Dicionário da Academia de Letras (as regras)...</p>
+                        <p>Para entender a diferença de forma bem simples, pense na relação entre o Português (a língua) e o Dicionário da Academia de Letras...</p>
                     </footer>
             </article>
         </a><br>
@@ -167,7 +179,7 @@ nav {
             <article class="indice">
                     <div class="cima"><h2>Variáveis</h2></div>
                     <footer class="footer-div">
-                        <p>Uma variável é como uma caixa etiquetada onde você guarda uma informação para usar mais tarde. No JavaScript moderno, usamos duas palavras...</p>
+                        <p>Uma variável é como uma caixa etiquetada onde você guarda uma informação para usar mais tarde. No JavaScript moderno, usamos duas...</p>
                     </footer>
             </article>
         </a><br>
@@ -181,10 +193,100 @@ nav {
                         Diferente de outras linguagens que separam...</p>
                     </footer>
             </article>
+        </a><br>
+    
+     <a href="javaScript.html">
+            <article class="indice">
+                    <div class="cima"><h2>Conversão de Dados (Type Casting / Coercion)</h2></div>
+                    <footer class="footer-div">
+                        <p>Às vezes, você recebe um dado em um formato (como um texto vindo de um formulário), mas precisa dele em outro formato como um...</p>
+                    </footer>
+            </article>
+        </a><br>
+
+     <a href="javaScript.html">
+            <article class="indice">
+                    <div class="cima"><h2>Manipulação de Dados</h2></div>
+                    <footer class="footer-div">
+                        <p>Manipular dados significa alterar o seu estado ou extrair informações úteis deles. Cada tipo de dado tem seus próprios "superpoderes" (métodos)...</p>
+                    </footer>
+            </article>
+        </a><br>
+
+     <a href="javaScript.html">
+            <article class="indice">
+                    <div class="cima"><h2>Formatação de Dados</h2></div>
+                    <footer class="footer-div">
+                        <p>Formatar é preparar o texto para que ele seja exibido de forma bonita e legível para o usuário final.</p>
+                        <p><strong>Formatação de String</strong>...</p>
+                    </footer>
+            </article><br>
+
+        </a>
+     <a href="javaScript.html">
+            <article class="indice">
+                    <div class="cima"><h2>Operadores</h2></div>
+                    <footer class="footer-div">
+                        <ul>
+                <li><strong>Operadores Aritméticos</strong>: São os operadores matemáticos clássicos que usamos para fazer cálculos.
+                        <p>Os Símbolos: ... <br></p></ul>
+                    </footer>
+            </article>
+        </a><br>
+
+     <a href="javaScript.html">
+            <article class="indice">
+                    <div class="cima"><h2>Tipos de Dados: O que vai dentro das variaveis</h2></div>
+                    <footer class="footer-div">
+                        <p><strong>number (Número):</strong> é Qualquer valor    numérico seja positivo, negativo, inteiro ou decimal.
+                        Diferente de outras linguagens que separam...</p>
+                    </footer>
+            </article>
+        </a>
+     <a href="javaScript.html">
+            <article class="indice">
+                    <div class="cima"><h2>Tipos de Dados: O que vai dentro das variaveis</h2></div>
+                    <footer class="footer-div">
+                        <p><strong>number (Número):</strong> é Qualquer valor    numérico seja positivo, negativo, inteiro ou decimal.
+                        Diferente de outras linguagens que separam...</p>
+                    </footer>
+            </article>
+        </a>
+     <a href="javaScript.html">
+            <article class="indice">
+                    <div class="cima"><h2>Tipos de Dados: O que vai dentro das variaveis</h2></div>
+                    <footer class="footer-div">
+                        <p><strong>number (Número):</strong> é Qualquer valor    numérico seja positivo, negativo, inteiro ou decimal.
+                        Diferente de outras linguagens que separam...</p>
+                    </footer>
+            </article>
+        </a>
+     <a href="javaScript.html">
+            <article class="indice">
+                    <div class="cima"><h2>Tipos de Dados: O que vai dentro das variaveis</h2></div>
+                    <footer class="footer-div">
+                        <p><strong>number (Número):</strong> é Qualquer valor    numérico seja positivo, negativo, inteiro ou decimal.
+                        Diferente de outras linguagens que separam...</p>
+                    </footer>
+            </article>
         </a>
     
-    
     </main>
+
+    <nav id="menu">
+        <ul>
+            <li>
+                <a href="index.html"><i class="fa-regular fa-house"></i><span class="menu-texto">Início</span>
+            </a></li>
+
+            <li>
+                <a href="ferramentas.html"><i class="fa-solid fa-brain"></i><span class="menu-texto">Ferramentas</span></a></li>
+
+            <li>
+                <a href="projectos.html"><i class="fa-solid fa-diagram-project"></i><span class="menu-texto">Projectos</span></a></li>
+
+        </ul>
+    </nav>
  
 
 </body>
