@@ -1348,40 +1348,57 @@ console.log(`Produto ${idProduto} removido com sucesso!`);
                     <p>const multiplicar = (a, b) => a * b;</p>
                     <p>console.log(multiplicar(3, 4)); // Saída: 12</p>
                 </code>
-                4. Parâmetros vs. Argumentos
-                Embora sejam usados como sinônimos, há uma diferença técnica conceitual:
-                    • Parâmetros: São os nomes das variáveis declarados na definição da função (as "vagas" esperando preenchimento).
-                    • Argumentos: São os valores reais passados para a função no momento em que ela é invocada.
-                Parâmetros com Valor Padrão (Default Parameters)
-                Você pode definir um valor de segurança para caso quem chame a função esqueça de passar um argumento.
-                JavaScript
-                function configurarDesconto(preco, taxa = 0.1) {
-                    return preco - (preco * taxa);
-                }
-                console.log(configurarDesconto(100));       // Saída: 90 (Usou a taxa padrão de 10%)
-                console.log(configurarDesconto(100, 0.3));  // Saída: 70 (Ignorou o padrão e usou 30%)
-                5. Escopo de Variáveis nas Funções
-                O conceito de Escopo determina onde uma variável pode ser acessada ou modificada dentro do seu código. As funções criam uma barreira de proteção conhecida como Escopo Local.
-                    • Escopo Global: Variáveis criadas fora de qualquer função pertencem ao escopo global e podem ser lidas por qualquer parte do arquivo.
-                    • Escopo Local (ou de Função): Variáveis criadas dentro de uma função nasceram ali dentro e morrem ali dentro. O mundo exterior não tem acesso a elas.
-                JavaScript
-                const globalVar = "Eu sou global";
-                function testarEscopo() {
-                    const localVar = "Eu sou local";
-                    console.log(globalVar); // Funciona! Consegue ler variáveis de fora.
-                    console.log(localVar);  // Funciona!
-                }
-                testarEscopo();
-                console.log(localVar); // ERRO! O sistema quebra porque localVar não existe fora da função.
+                <h3>Parâmetros vs. Argumentos</h3>
+                <p>Embora sejam usados como sinônimos, há uma diferença técnica conceitual:</p>
+                <ul>
+                    <li>Parâmetros: São os nomes das variáveis declarados na definição da função (as "vagas" esperando preenchimento).</li>
+                    <li>Argumentos: São os valores reais passados para a função no momento em que ela é invocada.</li>
+                </ul>
 
-                Os Proximos passos em Js
-                    1. Função 
-                    2. objetos
-                    3. modularização
-                    4. RegEx
-                    5. JSON
-                    6. AJAX
-                    7. NodeJS
+                <p> Parâmetros com Valor Padrão (Default Parameters)
+                Você pode definir um valor de segurança para caso quem chame a função esqueça de passar um argumento.</p>
+                <code>
+                    <p><strong>JavaScript</strong></p>
+                    <p>
+                        function configurarDesconto(preco, taxa = 0.1) {
+                            return preco - (preco * taxa);
+                        }
+                    </p>
+                    <p>console.log(configurarDesconto(100));       // Saída: 90 (Usou a taxa padrão de 10%)</p>
+                    <p>console.log(configurarDesconto(100, 0.3));  // Saída: 70 (Ignorou o padrão e usou 30%)</p>
+                </code>
+                <h3>Escopo de Variáveis nas Funções</h3>
+                <p>O conceito de Escopo determina onde uma variável pode ser acessada ou modificada dentro do seu código. As funções criam uma barreira de proteção conhecida como Escopo Local.</p>
+                <ul>
+                    <li><strong>Escopo Global:</strong> Variáveis criadas fora de qualquer função pertencem ao escopo global e podem ser lidas por qualquer parte do arquivo.</li>
+                    <li><strong>Escopo Local (ou de Função):</strong> Variáveis criadas dentro de uma função nasceram ali dentro e morrem ali dentro. O mundo exterior não tem acesso a elas.</li>
+                </ul>
+                <code>
+                    <p><strong>JavaScript</strong></p>
+                    <p>const globalVar = "Eu sou global";</p>
+                    <p>
+                        function testarEscopo() {
+                            <p>const localVar = "Eu sou local";</p>
+                            <p>console.log(globalVar); // Funciona! Consegue ler variáveis de fora.</p> 
+                            <p>console.log(localVar);  // Funciona!</p>
+                        <p>}</p>
+                    </p>
+                    <p>testarEscopo();</p>
+                    <p>console.log(localVar); // ERRO! O sistema quebra porque localVar não existe fora da função.</p>
+                </code>
+            </section>
+
+            <section id="poximos-passos">
+            <h2>Os Proximos passos em Js</h2>
+                <ol>
+                    <li> Função </li>
+                    <li>objetos</li>
+                    <li>modularização</li>
+                    <li> RegEx</li>
+                    <li>JSON</li>
+                    <li>AJAX</li>
+                    <li> NodeJS</li>
+                </ol>
             </section>
     
 
