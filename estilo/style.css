@@ -349,9 +349,9 @@ footer {
 
     footer {
 
-        display: block;
-        background-color: var(--destaque);
-        color: var(--texto-inverso);
+        display: block;   
+        color: var(--texto);
+        font-size: small;
         text-align: center;
         padding: 10px;
         width: 100vw;
