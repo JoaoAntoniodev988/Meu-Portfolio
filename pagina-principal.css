@@ -51,12 +51,13 @@ a {
 }
 
 .logo {
-    background-color: #0a66c2; /* Azul LinkedIn */
+    background-color: #054a8f;
     color: white;
     font-weight: bold;
+    font-size: small;
     padding: 6px 10px;
     border-radius: 4px;
-    font-size: 18px;
+  
 }
 
 .search-bar {
@@ -151,19 +152,10 @@ a {
     margin-top: 8px;
 }
 
-.manage-notifications-card {
-    padding: 12px;
-    font-size: 12px;
-}
-
-.manage-notifications-card a {
-    color: #0a66c2;
-    font-weight: 600;
-}
-
 /* Coluna Central: Filtros e Posts */
 .filter-box {
-    padding: 12px;
+    padding: 12px 25px;
+    justify-content: space-between;
     display: flex;
     gap: 8px;
 }
@@ -188,14 +180,16 @@ a {
 
 /* Card do Post (Feed) */
 .post-card {
-    padding: 16px;
+    padding: 20px;
 }
 
-.post-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
+.post-body li, strong {
+    font-family: "Inter";
+}
+
+.post-card h3, p {
+    padding: 5px 0;
+    font-family: "Inter";
 }
 
 .author-pic {
@@ -212,12 +206,6 @@ a {
 .post-header p {
     font-size: 12px;
     color: #00000066;
-}
-
-.post-body {
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 12px;
 }
 
 .post-actions {
@@ -255,6 +243,103 @@ a {
 .footer-links-card a:hover {
     color: #0a66c2;
     text-decoration: underline;
+}
+
+/* Estilos para a área de Produtividade e Skills */
+.todo-card, .skills-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.todo-card h3, .skills-card h3 {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #000000e6;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Grupo de Input da lista de tarefas */
+.todo-input-group {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+#todo-input {
+    flex: 1;
+    border: 1px solid #00000066;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+#add-todo-btn {
+    background-color: #0a66c2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#add-todo-btn:hover {
+    background-color: #004182;
+}
+
+/* Lista de Tarefas */
+#todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#todo-list li {
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f4f2ee;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#todo-list li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    background: #eef3f8;
+}
+
+/* Estilização das Barras de Skill */
+.item {
+    margin-bottom: 12px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.barra {
+    background-color: #eef3f8;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progresso {
+    background-color: #014f9c; /* Verde para combinar com o destaque científico */
+    height: 100%;
+    transition: width 0.5s ease-in-out;
 }
 
 /* ==========================================================================
