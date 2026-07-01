@@ -368,6 +368,15 @@ a {
         width: 100%;
     }
 
+    /* Coluna Central: Filtros e Posts */
+    .filter-box {
+    justify-content: center;
+    gap: 25px;
+    }
+
+    .redes {
+        display: block;
+    }
 }
 
 /* 2. Ajuste Crítico para Telemóveis/Smarphones (Até 600px) */
@@ -450,13 +459,7 @@ a {
         display: none;
     }
     
-    .filter-box::-webkit-scrollbar {
-        display: none; /* Esconde a barra no Chrome/Safari */
-    }
-
-    .filter-btn {
-        flex-shrink: 0; /* Impede que os botões sejam esmagados pelo flexbox */
-        padding: 6px 14px;
-        font-size: 13px;
+    .redes {
+        display: block;
     }
 }
