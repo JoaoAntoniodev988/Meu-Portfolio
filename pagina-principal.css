@@ -364,15 +364,14 @@ a {
         width: 100%;
     }
 
-    /* Reduzimos ligeiramente o tamanho da barra de pesquisa do topo */
-    .search-bar {
-        width: 180px;
-    }
 }
 
 /* 2. Ajuste Crítico para Telemóveis/Smarphones (Até 600px) */
 @media (max-width: 600px) {
    
+    body {
+    padding-top: 0px;
+}
     /* 1. TRANSFORMAÇÃO DO HEADER EM MENU INFERIOR FIXO */
     .main-header {
         position: fixed;
@@ -407,16 +406,21 @@ a {
     .main-content {
        grid-template-columns: 1fr; /* Transforma as 3 colunas numa única coluna vertical */
         padding: 12px;
+        gap: 0;
+        margin-bottom: 75px;
     }
 
     .left-sidebar {
-        width: 85%;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 0px;
     }
 
     .feed-column {
-        width: 85%;
+        width: 95%;
         /* Impede que a coluna do feed estique horizontalmente */
-        max-width: 100%; 
+        max-width: 100%;
+        margin: auto;
     }
 
     /* CORREÇÃO CRÍTICA DO CARD DO FEED: */
@@ -430,7 +434,7 @@ a {
         overflow-wrap: break-word;
     }
 
-    .post-body p {
+    .post-body p, ul, ol {
         font-size: 13px;
         line-height: 1.5;
         /* Garante que as margens não empurrem o bloco */
@@ -439,14 +443,7 @@ a {
 
     /* AJUSTE FIEL DOS BOTÕES DE FILTRO: */
     .filter-box {
-        display: flex;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 8px 4px;
-        gap: 8px;
-        width: 99%;
-        /* Esconde a barra de rolagem nativa para parecer uma aplicação móvel limpa */
-        -webkit-overflow-scrolling: touch;
+        display: none;
     }
     
     .filter-box::-webkit-scrollbar {
