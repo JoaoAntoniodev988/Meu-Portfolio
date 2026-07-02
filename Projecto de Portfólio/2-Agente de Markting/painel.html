@@ -55,7 +55,7 @@
                 <div class="form-group">
                     <label for="valor-campanha">Quanto quer investir neste anúncio?</label>
                     <select id="valor-campanha">
-                        <option value="10">KZ 1.490 (Alcança aprox. 1.000 pessoas da sua região)</option>
+                        <option value="10">1.490 kz (Alcança aprox. 1.000 pessoas da sua região)</option>
                         <option value="30">R$ 30,00 (Alcança aprox. 3.500 pessoas da sua região)</option>
                         <option value="50">R$ 50,00 (Alcança aprox. 6.000 pessoas da sua região)</option>
                     </select>
@@ -63,6 +63,39 @@
 
                 <button type="submit" id="btn-publicar" class="btn-submit">Publicar Anúncio Agora</button>
             </form>
+
+            <section id="preview-campanha-ia" class="campaign-card style-preview" style="display: none;">
+                <div class="preview-header">
+                    <span class="badge-ia">✨ Agente de Markting Ambulante</span>
+                    <h3>Seu Anúncio está Pronto para Revisão!</h3>
+                </div>
+                <p class="subtitle">Analise como o seu anúncio aparecerá nas redes sociais. Você pode aceitar, rejeitar ou pedir alterações.</p>
+
+                <div class="preview-workspace">
+                    <div class="mockup-post">
+                        <div class="post-header">
+                            <div class="brand-circle"></div>
+                            <div>
+                                <h5 class="post-page-name">Seu Negócio (Patrocinado)</h5>
+                                <span class="post-time">Agora mesmo · 🌐</span>
+                            </div>
+                        </div>
+                        <p id="post-texto-ia" class="post-text">Gerando texto criativo...</p>
+                        <div id="post-imagem-container" class="post-image-box"></div>
+                    </div>
+
+                    <div class="ia-refinement">
+                        <label for="ia-sugestoes">💡 Quer mudar alguma coisa? Dê sugestões:</label>
+                        <textarea id="ia-sugestoes" placeholder="Ex: Deixe o texto mais divertido, use emojis de comida, foque em uma promoção de fim de semana..."></textarea>
+                        <button id="btn-ajustar-ia" class="btn-secondary">Regerar com Sugestões</button>
+                    </div>
+                </div>
+
+                <div class="preview-actions">
+                    <button id="btn-rejeitar-anuncio" class="btn-danger">Rejeitar e Cancelar</button>
+                    <button id="btn-confirmar-publicacao" class="btn-success">Aprovar e Publicar Anúncio</button>
+                </div>
+            </section>
             
         </section>
 
