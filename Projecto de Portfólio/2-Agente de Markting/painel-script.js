@@ -11,34 +11,21 @@ const selectValorCampanha = document.getElementById('valor-campanha');
 let saldoEmConta = 0;
 
 // ==========================================================================
-// 2. LÓGICA DA CARTEIRA DIGITAL (CARREGAR SALDO)
+// ==========================================================================
+// 2. NOVA LÓGICA DA CARTEIRA DIGITAL (REDIRECIONAR PARA PAGAMENTO)
 // ==========================================================================
 btnRecargar.addEventListener('click', function() {
-    // Pegamos o valor digitado e convertemos para um número decimal
     const valorDigitado = parseFloat(inputRecarga.value);
 
-    // Validação importante: verifica se o usuário digitou um número válido e maior que zero
+    // Verificação de segurança
     if (isNaN(valorDigitado) || valorDigitado <= 0) {
         alert('Por favor, insira um valor válido em AOA para carregar a sua carteira.');
         return;
     }
 
-    // Somamos o valor digitado ao saldo atual
-    saldoEmConta += valorDigitado;
-
-    // Atualizamos a tela formatando o número de forma bonita (ex: 1.500,00)
-    txtSaldo.textContent = saldoEmConta.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
-
-    // Limpamos o campo de texto e damos foco nele novamente
-    inputRecarga.value = '';
-    alert(`Sucesso! O saldo de AOA ${valorDigitado.getFormatedCurrency} foi adicionado à sua Carteira Ambulante.`);
+    // Enviamos o utilizador para a página de pagamento levando o valor no link
+    window.location.href = `pagamento.html?valor=${valorDigitado}`;
 });
-
-// Helper simples para ajudar a formatar mensagens se necessário
-Number.prototype.getFormatedCurrency = function() {
-    return this.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
-}
-
 // ==========================================================================
 // 3. LÓGICA DO AGENTE DE MARKETING (VALIDAR E PUBLICAR CAMPANHA)
 // ==========================================================================

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulante - Validar Pagamento</title>
+    <link rel="stylesheet" href="pagamento-style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-logo">
+            <div class="brand-circle"></div>
+            <h2>Ambulante <span>Checkout</span></h2>
+        </div>
+        <a href="painel.html" class="btn-voltar">← Voltar ao Painel</a>
+    </header>
+
+    <main class="checkout-container">
+        
+        <section class="checkout-summary">
+            <h3>Resumo da Carga</h3>
+            <div class="value-box">
+                <span class="value-label">Total a Pagar</span>
+                <h1 id="total-pagamento">AOA 0,00</h1>
+            </div>
+            
+            <div class="info-notice">
+                <p>🛡️ Pagamento processado de forma segura.</p>
+                <p>⏱️ Após a submissão, o saldo será validado pela nossa equipa administrativa.</p>
+            </div>
+        </section>
+
+        <section class="payment-methods">
+            
+            <div class="method-card active">
+                <h4>📱 Via EMIS (Multicaixa Express)</h4>
+                <p class="method-desc">Introduza o número associado ao seu Express para receber a notificação de pagamento no telemóvel.</p>
+                <div class="input-inline">
+                    <input type="tel" id="telefone-express" placeholder="Ex: 923000000">
+                    <button id="btn-pagar-express">Enviar Notificação</button>
+                </div>
+            </div>
+
+            <div class="method-card">
+                <h4>🏦 Pagamento Manual por Transferência</h4>
+                <p class="method-desc">Efetue a transferência para a conta abaixo e anexe o comprovativo.</p>
+                
+                <div class="bank-details">
+                    <p><strong>Titular:</strong> AMBULANTE (SU), LDA</p>
+                    <p><strong>IBAN:</strong> AO06 0055 0000 2213 7527 1018 1</p>
+                </div>
+
+                <form id="form-comprovativo" onsubmit="event.preventDefault();">
+                    <div class="file-drop-area">
+                        <input type="file" id="ficheiro-comprovativo" accept="image/*,.pdf" required>
+                        <p>📁 Arraste o comprovativo para aqui ou clique para selecionar (Imagem ou PDF)</p>
+                    </div>
+                    <button type="submit" class="btn-submit-comprovativo">Submeter para Validação Manual</button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="pagamento-script.js"></script>
+</body>
+</html>
