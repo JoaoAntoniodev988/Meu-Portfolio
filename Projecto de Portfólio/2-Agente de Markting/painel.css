@@ -27,13 +27,12 @@ body {
    2. BARRA DE NAVEGAÇÃO (NAVBAR)
    ========================================================================== */
 .navbar {
-    display: flex;
+   display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--cor-preta); /* Fundo preto para destacar a marca */
+    background-color: var(--cor-preta);
     color: #ffffff;
     padding: 15px 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo {
@@ -51,13 +50,12 @@ body {
 }
 
 .nav-logo h2 {
-    font-size: 20px;
-    font-weight: 700;
+    color: var(--cor-card);  
 }
 
 .nav-logo h2 span {
     color: var(--cor-amarela); /* Destaque em amarelo na navbar */
-    font-weight: 400;
+    font-weight: bold;
 }
 
 .badge-online {
@@ -87,7 +85,7 @@ body {
     border-radius: var(--border-radius-padrao);
     padding: 30px;
     /* Adicionando uma sombra leve de fundo para os blocos se destacarem no fundo claro */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+   box-shadow: 1px 4px 6px 2px rgba(0, 0, 0, 0.363);
 }
 
 /* Alinhamento do Rodapé da esquerda */
@@ -154,18 +152,12 @@ h3 {
     font-weight: 700;
     cursor: pointer;
     border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .wallet-actions button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.wallet-actions button:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 4px 6px 2px rgba(0, 0, 0, 0.363);
 }
 
 /* ==========================================================================
@@ -239,18 +231,12 @@ h3 {
     font-weight: 700;
     cursor: pointer;
     border: none;
-    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.322);
     transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .btn-submit:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 6px var(--cor-preta);
-}
-
-.btn-submit:active {
-    transform: translate(0, 0);
-    box-shadow: 4px 4px 6px var(--cor-preta);
+    box-shadow: 1px 4px 6px 2px rgba(0, 0, 0, 0.363);
 }
 
 .redesSocial, .marca, .redesSocial a {

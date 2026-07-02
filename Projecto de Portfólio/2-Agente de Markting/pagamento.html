@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ambulante - Validar Pagamento</title>
     <link rel="stylesheet" href="pagamento-style.css">
+    <script src="https://kit.fontawesome.com/c99245ec2d.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <header class="navbar">
         <div class="nav-logo">
             <div class="brand-circle"></div>
-            <h2>Ambulante <span>Checkout</span></h2>
+            <h2>Ambulante <br><span>Checkout</span></h2>
         </div>
         <a href="painel.html" class="btn-voltar">← Voltar ao Painel</a>
     </header>
@@ -19,7 +20,7 @@
     <main class="checkout-container">
         
         <section class="checkout-summary">
-            <h3>Resumo da Carga</h3>
+            <h3>Resumo da Recarga</h3>
             <div class="value-box">
                 <span class="value-label">Total a Pagar</span>
                 <h1 id="total-pagamento">AOA 0,00</h1>
@@ -32,18 +33,16 @@
         </section>
 
         <section class="payment-methods">
-            
-            <div class="method-card active">
-                <h4>📱 Via EMIS (Multicaixa Express)</h4>
-                <p class="method-desc">Introduza o número associado ao seu Express para receber a notificação de pagamento no telemóvel.</p>
-                <div class="input-inline">
-                    <input type="tel" id="telefone-express" placeholder="Ex: 923000000">
-                    <button id="btn-pagar-express">Enviar Notificação</button>
-                </div>
-            </div>
 
             <div class="method-card">
-                <h4>🏦 Pagamento Manual por Transferência</h4>
+
+                <h4>📱 Via EMIS (Multicaixa Express)</h4>
+                <p class="method-desc">Efetue um pagamento para o número abaixo e anexe o comprovativo.</p>
+                <div class="bank-details">
+                    <p><strong>937-817-248</strong></p>
+                </div>
+    
+                <h4>🏦 Via Transferência Bancária</h4>
                 <p class="method-desc">Efetue a transferência para a conta abaixo e anexe o comprovativo.</p>
                 
                 <div class="bank-details">
@@ -56,12 +55,25 @@
                         <input type="file" id="ficheiro-comprovativo" accept="image/*,.pdf" required>
                         <p>📁 Arraste o comprovativo para aqui ou clique para selecionar (Imagem ou PDF)</p>
                     </div>
-                    <button type="submit" class="btn-submit-comprovativo">Submeter para Validação Manual</button>
+                    <button type="submit" class="btn-submit-comprovativo">Submeter para Validação</button>
                 </form>
             </div>
 
         </section>
     </main>
+
+     <footer>
+        <div class="redesSocial">
+            <a href="https://www.linkedin.com/in/jo%C3%A3o-de-sousa-ant%C3%B3nio-971077285/"><i class="fa-brands fa-square-linkedin"></i></a>
+            <a href="https://github.com/JoaoAntoniodev988"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/JoaoAntonio.Dev988"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/joaoantonio.dev988/"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://wa.me/244931077263"><i class="fa-brands fa-square-whatsapp"></i></i></a>
+            <a href="mailto:joaodesousaantonio2@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            <p>&copy; 2026 Js-Dev988 Júnior</p>
+        </div>
+            
+         </footer>
 
     <script src="pagamento-script.js"></script>
 </body>
