@@ -33,7 +33,9 @@ body {
 body h2 {
     font-size: var(--text-md);
     font-family: var(--tipografiaTitulo);
+    margin-bottom: 10px;
 }
+
 
 body h1 { 
     font-size: var(--text-lg);
@@ -191,8 +193,8 @@ a {
 }
 
 .filter-btn.active, .filter-btn:hover {
-    background-color: var(--corDeDestaque2);
-    color: var(--corDeRespiro);
+    background-color: var(--CorDeDestque);
+    color: var(--corDeDestaque2);
     border-color: var(--corDeDestaque2);
 }
 
