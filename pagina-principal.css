@@ -17,8 +17,8 @@
     --text-base: 1rem;
     --text-md: calc(var(--text-base) * 1.25);
     --text-lg: calc(var(--text-md) * 1.25);
-    --tipografiaCorpo:-apple-system, system-ui, "Segoe UI", "Helvetica Neue", "Fira Sans";
-    --tipografiaTitulo: "Oxygen Sans", "Droid Sans", sans-serif; 
+    --tipografiaCorpo: "Inter", "Roboto", "Oxygen Sans", "Droid Sans", sans-serif; 
+    --tipografiaTitulo: -apple-system, system-ui, "Segoe UI", "Helvetica Neue", "Fira Sans";
 }
 
 
@@ -32,9 +32,12 @@ body {
 
 body h2 {
     font-size: var(--text-md);
+    font-family: var(--tipografiaTitulo);
 }
 
-body h1 { font-size: var(--text-lg);
+body h1 { 
+    font-size: var(--text-lg);
+    font-family: var(--tipografiaTitulo);
 }
 
 
@@ -134,16 +137,16 @@ a {
 }
 
 .cover-photo {
-    background-color: #a0b4b7;
+    background-color: var(--CorDeDestque);
     height: 60px;
     width: 100%;
 }
 
 .profile-pic {
-    width: 72px;
-    height: 72px;
+    width: 92px;
+    height: 92px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid var(--corDeDestaque2);
     margin-top: -36px;
     background-color: #ccc;
     object-fit: cover;
@@ -177,20 +180,20 @@ a {
 
 .filter-btn {
     background: none;
-    border: 1px solid #00000099;
-    color: #00000099;
+    border: 1px solid var(--CorDeDestque);
+    color: var(--CorDeDestque);
     padding: 6px 10px;
     border-radius: 15px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: var(--text-base);
     cursor: pointer;
     transition: all 0.2s;
 }
 
 .filter-btn.active, .filter-btn:hover {
-    background-color: #0160b9; /* Verde escuro igual ao botão 'Tudo' da imagem */
-    color: white;
-    border-color: #636363;
+    background-color: var(--corDeDestaque2);
+    color: var(--corDeRespiro);
+    border-color: var(--corDeDestaque2);
 }
 
 /* Card do Post (Feed) */
