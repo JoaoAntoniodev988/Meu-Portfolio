@@ -79,13 +79,14 @@ a {
 }
 
 .logo {
-    background-color: #054a8f;
-    color: white;
-    font-weight: bold;
-    font-family: var(--tipografiaTitulo);
+    background-color: var(--corDeFundo);
     padding: 6px 10px;
     border-radius: 4px;
-    
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
 }
 
 .header-nav {
@@ -109,7 +110,7 @@ a {
 }
 
 /* ==========================================================================
-   3. LAYOUT PRINCIPAL EM GRID (As 3 Colunas)
+   3. LAYOUT PRINCIPAL EM GRID (As 3 Colunas) com duas coluna da fixa e o main rolando normalmente
    ========================================================================== */
 .main-content {
     display: grid;
@@ -117,7 +118,34 @@ a {
     gap: 24px;
     max-width: 1128px;
     margin: 0 auto;
-    padding: 24px;
+    padding: 10px 24px 24px 24px;
+    align-items: start;
+}
+
+/* Coluna da Esquerda (Teu Perfil) */
+.left-sidebar {
+    position: -webkit-sticky; /* Suporte para navegadores Safari antigos */
+    position: sticky;
+    top: 80px; /* Fica presa a 80px do topo do ecrã (ajuste dependendo da altura do teu header) */
+    z-index: 10;
+}
+
+/* Coluna da Direita (Foco do Dia, Skills e Rodapé) */
+.right-sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px; /* Fica presa à mesma altura para manter o alinhamento visual perfeito */
+    z-index: 10;
+    
+    /* Caso a tua coluna da direita seja muito comprida devido a muitas Skills, 
+    esta regra permite rolar internamente dentro dela se ela passar do tamanho da tela */
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+/* Opcional: Esconde a barra de rolagem da barra lateral direita se ela precisar de scroll interno */
+.right-sidebar::-webkit-scrollbar {
+    width: 0px;
 }
 
 /* ==========================================================================
@@ -125,33 +153,51 @@ a {
    ========================================================================== */
 .profile-card, .filter-box, .post-card, .footer-links-card, #skills, .todo-card  {
     background-color: var(--corDeRespiro);
-    /* border: 1px solid var(--CorDeDestque); */
     border-radius: 8px;
     margin-bottom: 12px;
     overflow: hidden;
     box-shadow: 2px 2px 4px 2px var(--CorDeSombra);
 }
 
-/* Coluna Esquerda: Perfil */
+
+/* ==========================================================================
+   ALINHAMENTO DE PRECISÃO: CARD DE PERFIL E AVATAR
+   ========================================================================== */
+
+/* Garante o posicionamento correto dos elementos dentro do card */
 .profile-card {
+    background: var(--corDeRespiro);
+    border: 1px solid var(--corDeRespiro);
+    border-radius: 8px;
     text-align: center;
     padding-bottom: 16px;
+    overflow: hidden; /* Corta o banner nas pontas arredondadas do card */
+    position: relative;
 }
 
+.container-img {
+    background-color: var(--corDeFundo);
+    border-radius: 8px;
+    padding: 10px;
+}
+/* A TUA FOTO DE PERFIL (Ajuste Definitivo) */
+.profile-pic {
+   width: 150px;
+   aspect-ratio: 1/1;
+   object-fit: cover;
+   border-radius: 50%;
+   border: 5px solid var(--corDeRespiro);
+   outline: 5px solid var(--CorDeDestque) ;
+   display: block;
+   margin: auto;
+}
+
+
+/* Coluna Esquerda: Perfil */
 .cover-photo {
     background-color: var(--CorDeDestque);
     height: 60px;
     width: 100%;
-}
-
-.profile-pic {
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-    border: 2px solid var(--corDeDestaque2);
-    margin-top: -36px;
-    background-color: #ccc;
-    object-fit: cover;
 }
 
 .profile-card h2 {
@@ -161,16 +207,17 @@ a {
 
 .profile-card p {
     font-size: 12px;
-    color: #00000099;
+    color: var(--cordeTexto);
     padding: 0 12px;
 }
 
 .location {
     display: block;
     font-size: 12px;
-    color: #00000066;
+    color: var(--cordeTexto);
     margin-top: 8px;
 }
+
 
 /* Coluna Central: Filtros e Posts */
 .filter-box {

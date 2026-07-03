@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="2587.1787"
+   height="414.81024"
+   viewBox="0 0 2587.1787 414.81024"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       xlink:href="#linearGradient6"
+       id="linearGradient7"
+       x1="257.38596"
+       y1="384.3786"
+       x2="865.13373"
+       y2="384.3786"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.86239257,0,0,0.86239257,-126.67615,34.655189)" />
+    <linearGradient
+       id="linearGradient6">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop6" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop7" />
+    </linearGradient>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-626.41058,-912.9566)">
+    <g
+       id="g1"
+       transform="matrix(3.3013739,0,0,3.3013739,301.5949,-88.404648)">
+      <text
+         xml:space="preserve"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:147.212px;font-family:Dyuthi;-inkscape-font-specification:'Dyuthi Italic';writing-mode:lr-tb;direction:ltr;fill:#000080;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+         x="87.301811"
+         y="404.30914"
+         id="text4"><tspan
+           id="tspan4"
+           x="87.301811"
+           y="404.30914"
+           style="stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"><tspan
+             style="fill:#000000;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+             id="tspan6">JS.Dev988 </tspan><tspan
+             style="fill:#800080;fill-opacity:1;stroke:url(#linearGradient7);stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+             id="tspan5">{}</tspan></tspan></text>
+    </g>
+  </g>
+</svg>
